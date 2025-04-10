@@ -1,0 +1,17 @@
+Descrição: Lista de dependências Python necessárias para executar o projeto:
+numpy
+pandas
+scikit-learn
+tensorflow
+keras
+matplotlib
+seaborn
+beautifulsoup4
+requests
+jupyter
+scipy
+plotly
+dash
+joblib
+
+

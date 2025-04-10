@@ -1,0 +1,8 @@
+Iniciando treinamento em 30/10/2024 10:00
+
+Carregando dados de dados/processado/caracteristicas_selecionadas.csv
+Dividindo dados em treino e teste
+Treinando modelo RandomForestRegressor com parâmetros: {'n_estimators': 100, 'random_state': 42}
+Treinamento concluído em 0:02:35
+Score do modelo: 0.85
+Modelo salvo em modelos/modelos_salvos/modelo_random_forest.pkl
