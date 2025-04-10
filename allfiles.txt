@@ -1,0 +1,351 @@
+3b10bd78d47aca180bb60343dfd6d63176b572ec
+470c0e96d6c057438f027dd777f36bf6d0806639 
+fc43bb873921cc4cb10975559d37dcf6009b8fa8 .gitignore
+65c6c46571d0870fad39ced3ccbbdfcadb658a11 .vscode
+3b664107303df336bab8010caad42ddaed24550e .vscode/settings.json
+0c896942bf0956c20060403a39f4f318b357798d informacao
+ea734cf6185376dabecdb97efe51629d0b0e8032 informacao/LEIAME.md
+2ce8998b9685f46f42722477a4b8cb7d0d035472 informacao/LICENCA
+6b057b5991c16c8743f5295b8aa345800146a695 informacao/ambiente
+5b99a070e62ffc64486f102197b306fa7b86fcf6 informacao/ambiente/ambiente.yml
+947f29957b3afe8b9aa6f26f89dec7333f84ff0c informacao/ambiente/requisitos.txt
+bb4c92859183eaa2fa32208b77e6a9751f95babf informacao/artigo
+42198b0db5affaa887eaefe412e88ba77b9f07cb informacao/artigo/manuscrito
+e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 informacao/artigo/manuscrito/artigo.docx
+4c652d30c86e615ff871c4a2b14dc3a49d2a54bb informacao/artigo/manuscrito/figuras
+58a4bc816e6c0d78398e8573f201c2cb1ca10ca3 informacao/artigo/manuscrito/figuras/01 - Pegar links dados INEP - 1995-2023.png
+8cde20e01417838a1311bff75a937dd21591af43 informacao/artigo/manuscrito/figuras/02 - Baixar dados INEP - 1995-2023.png
+d427bc6a2ba1bcc4b06cd81d9c54e5ff950131f4 informacao/artigo/manuscrito/figuras/03 - Limpeza dados INEP - 1995-2023.png
+20c11f33f75a95a8c1f23334a10109a62dd97a8c informacao/artigo/manuscrito/referencias
+c593017b67331ab72e960c88bdb843a5f6d83663 informacao/artigo/manuscrito/secoes
+bec476b380fd5fa33d17850cf794cdf4b53ec20e informacao/artigo/submissao
+bef9035cd6aeaf126e00b108e3cf408482ecee7f informacao/dados
+dd734ed2ca666009af2a61519a68704aa0f6a0e9 informacao/dados/bruto
+4b84f93d086fb3325300f8b83a47ff953bdd3940 informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO
+9515535f881ed08b64b5b30bfea4e6e2924c8d0d informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO.zip
+d77a8983879fab54bdfe9938e7ea6a984380159c informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995
+bf83780e120a4a5cc89f03205a3011d322df97c8 informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/DADOS
+0401d1acd6c0030dc554eb7f319f053ed377f8ee informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/DADOS/MD5_microdados_ed_superior_1995.TXT
+8c738156d8e212bb791cad1ff6150cd286f00441 informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/Leia-me
+478a726ee00c2bc0795e1dfb8d6af4e9b5469011 informacao/dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/Leia-me/Leia_me Superior_1995.pdf
+00ad392594dab322b1bbb02a12d5524edd60f390 informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO
+8a8345d64d247971bbdbb51c0c0d22729f1feb53 informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO.zip
+4f69c5c4816d84c93103c7f69afeea33728db34a informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996
+f633b8acf2b8b735b6211458a1e6f30c1de863b5 informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/DADOS
+d2d34a0a1169ef50a564f42e090ad3a85c73fe4f informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/DADOS/MD5_microdados_ed_superior_1996.TXT
+0501d38d165ce1bc5a81579bbad7c5de87bde3af informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/Leia-me
+42bd9f4bc4f1416c30c4143fd2ec23f98d45abd3 informacao/dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/Leia-me/Leia_me Superior_1996.pdf
+45af5ce9f22f401ef8ac801b5d4939095c6acc2c informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO
+ed20ee415a0765cb060e8278b46ccc8b773d186d informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO.zip
+8cbb9924af7789a6e7511e3140fa03b721972e78 informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997
+69967b0c0b0ed465365a6939a5cdd74836db5e64 informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/DADOS
+ea40858e39d6f9b81d95170d2f2277e17c94937d informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/DADOS/MD5_microdados_ed_superior_1997.TXT
+4c09d349996ce69a9fd40631a0ac4eee0020c675 informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/Leia-me
+e482d5e7095dccd23b9f3a9bfb8924fb97384eed informacao/dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/Leia-me/Leia_me Superior_1997.pdf
+2843fbbcb5af82db8ee6c90f4692cfecf46bd061 informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO
+244c026b4d9bfae82f2a25324e7e9a8b54e8942f informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO.zip
+d67d0ab500bf98e6ed82629f6b57c4d59fbfebc8 informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998
+23b31db068a335fab3d34a0a796e75230d58e237 informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/DADOS
+49d915183586742a63df013578f8ca539b57dc64 informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/DADOS/MD5_microdados_ed_superior_1998.TXT
+969c486af52e482534c854ca1d095d28ed693be9 informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/Leia-me
+5c9d69206ab82d458da8aca646919dd67c5efa8d informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/Leia-me/Leia_me Superior_1998.pdf
+6b17f7ac21a8b7abdc92a33a831667d2250ae797 informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO
+044381bd56963239f431c407b811f67c4ee0bff1 informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO.zip
+85dfa43a4da4f401de198c60dfce8f47837aac1c informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999
+2532788f82d4872bbb98ee1a92737a4c68cb8d52 informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/DADOS
+7feb53827ff198b6d5b4419dbd08f437975477b6 informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/DADOS/MD5_microdados_ed_superior_1999.txt
+9ead078479a8ecc0a74555361b72acd9dd676fc4 informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/Leia-me
+dca40c417cd6088f513d69cfd2e388b98666713e informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/Leia-me/Leia_me Superior_1999.pdf
+134861df8a9fb7eb50943f9e103bfe98ac30788b informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO
+c7e0e7c89072fb1f5a374cd69b7866c46da5f827 informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO.zip
+af4eb5456ef57ac56dba2766f8ab45e2c9576eee informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000
+606cceb67c74409ff5431971c8ea337730d17728 informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/DADOS
+3c5d15821acbbf67046813bfc0ee508bc71f58b2 informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/DADOS/MD5_microdados_ed_superior_2000.TXT
+68537cb3e32cce85d09a2bc431599a5a10d1f33a informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/Leia-me
+13498bce25997a7926a6ffe7b745ffa4cedc5d6d informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/Leia-me/Leia_me Superior_2000.pdf
+519aec56e9ecf4ca37d1f91abe74899482ec8f44 informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO
+86efda2ea97a617bf3e042899404490095843f7d informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO.zip
+4c76b3182e2afed8ca653506a013b041c9aa7c96 informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001
+a993b5c5f89b9f4c26476f4d8c428ed29886bddc informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/DADOS
+760be583de2b975442a37c98f47bd0d84e79b87d informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/DADOS/MD5_microdados_ed_superior_2001.TXT
+191d3ca1feb8863c6931c34da745191776604f30 informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/Leia-me
+a43925c1f0b3232cd4484a40d439afe52bf909a6 informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/Leia-me/Leia_me Superior_2001.pdf
+c1a2ed5ad991aba43c659f799f1aa263e6ef0670 informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO
+c17ba65be0c74a74aa942bd7af9a6953d08adcb9 informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO.zip
+1c168154e46481895f4c8946f906344293d78e9b informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002
+13fecbb593f32da1ed7d26051cb5ac09b7bb4683 informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/DADOS
+e4f2c13bc72417eefc3e74248efb0d70515afb8b informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/DADOS/MD5_microdados_ed_superior_2002.TXT
+ae6f83227f8bdd6a7cbb11de47a83e13a35c36d5 informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/Leia-me
+6deb6c5b99f70de8ad80773c5e7d310fbbcb0927 informacao/dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/Leia-me/Leia_me Superior_2002.pdf
+c825efe2607a2307e1cb0ce421533e9911b6ec00 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO
+657b4257a0427abb2b6954d899beca1aa16b3259 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO.zip
+c20ba09a52e60c795d537424a6cf087fc83d1e89 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003
+f763348ba2cab57a09a857f192bb18b8382af70b informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/DADOS
+f65aa5777f28742cd25641aac8d3ada88a311e47 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/DADOS/MD5_microdados_ed_superior_2003.TXT
+4bda981d320e251b1a62ca59a0a1b9b9e3557986 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/Leia-me
+5c73d3f0237027b9322648081ce9cfecf43b4bb0 informacao/dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/Leia-me/Leia_me Superior_2003.pdf
+8be55ce8a8dd2fe86a2fcd02e3d98cc9bd451063 informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO
+088bc0aa85c49219f3bc391e4e31e49a4aa424d6 informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO.zip
+fa38355be312a394a1e16448cca08cd1719b2b97 informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004
+0d41799ecebc83bbf3224f77e1ba69fef0ba508f informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/DADOS
+ec06569bbc0e31d5764316c4d139c846c2b5aa94 informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/DADOS/MD5_microdados_ed_superior_2004.TXT
+3ba26d3e2753d9ce4e3ea140b3094289ea847aa5 informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/Leia-me
+c7acf37f1d94a2204e4deebcc3239b6f04394c4d informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/Leia-me/Leia_me Superior_2004.pdf
+a843fb7bb0fd2640d61b4f7158e85bc915d0f17d informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO
+91e3a7f1bb06c164291ba5be02c2fda2e2ee9501 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO.zip
+e5b261ce98714e3ddca7bf357bad388a48cea297 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005
+126b9b95fa79ce9779cbdee3a1cf69fdf6cd2ec4 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/DADOS
+ea02d736a7b770c9360fd521a52b8dcae19694a3 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/DADOS/MD5_microdados_ed_superior_2005.TXT
+c051a6b31c880bd2a57c24435713b5a95de182d7 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/Leia-me
+857ed526b2b494569914e3bf4e2eb1473911b6e9 informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/Leia-me/Leia_me Superior_2005.pdf
+81cb37a6f46b296854943be50b77af5123e01637 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO
+fc069ba704aaca0a952232ac2fdbb56e96b74776 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO.zip
+47c2ee2f5bf88591b246feab6950c8c285839020 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006
+c5b1210a2e9b491cac95bb707878600210785775 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/DADOS
+e7d8823d8162e278955e246f52120a5b000be2e0 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/DADOS/MD5_microdados_ed_superior_2006.TXT
+2ac7bb664794898bfb1fd994014717d45c2721b6 informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/Leia-me
+af4758df2a8d6f2e612ac7e262f2b66eee1d6ced informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/Leia-me/Leia_me Superior_2006.pdf
+646cdbf9d5ca748d1f51d87cf0ac1205b2678b23 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO
+1c9e46e462e5fcf33dbe3131bfb9cee172b49b98 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO.zip
+eca32b9272d905083500668c34188a9ed1b21cf6 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007
+c597db7049553b8f0a34db1db2020a2a0e30a375 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/DADOS
+b802ed24f560c2b3ff5b5d862dda9aedfa44ea67 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/DADOS/MD5_microdados_ed_superior_2007.txt
+5357ec1fb506db01a5d51f99419f5fb5b98f6d16 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/Leia-me
+756ee6cd750f6ace71e09d95618b5afec8d67f17 informacao/dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/Leia-me/Leia_me Superior_2007.pdf
+ea9fcaea0fa9a95590bc7d460f350f9d326fe5c9 informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO
+cde15be8882dbe0e1b954d6c9309face5aa82e42 informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO.zip
+80703a738c7911ad9549aa719785bb4f446defc5 informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2008
+2cf6929928c74ad0e2753a165b91c93c3fcd9e2a informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2008/DADOS
+86f3035fbc6e7528559767bd85e10d5220b2bb1e informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2008/DADOS/MD5_microdados_ed_superior_2008.txt
+638c4b79821423bd7af4b2385ac57c0b96ab7896 informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2008/leia-me
+824e3df5158234a43e7b762202299c8eabc6bdc0 informacao/dados/bruto/INEP_2008-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2008/leia-me/Leia_me Superior_2008.pdf
+c14daccdfcbf869412acc69def65e8be55734549 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO
+c6eca9ff8de940dd1b1f041c9a4a84e6eddcdb46 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO.zip
+61d6f12341e4b7a6c2fef98434d993bd7f64ac29 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009
+bfa03a2c4869692620831a5c141ebe84f00d7416 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos
+4f8c12475eead604283eceb42e157734cb4ecfac informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO I - Dicionário de Dados
+fd204a10b9e428637741434b9f16b23265bddfaa informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO I - Dicionário de Dados/dicionário_dados_educaç╞o_superior.xlsx
+fc1627a891577ee92d24bcc29e1fa479ff1aa725 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO I - Dicionário de Dados/~$Dicionário de Dados da Educaç╞o Básica.xlsx
+77b0d310d3872596186eae8d952c78716ca32f6e informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO I - Dicionário de Dados/~$dicionário_dados_educaç╞o_superior.xlsx
+0d118e4cb3d2d909c9c591a2f8619587a868b003 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+c869c720e3f2890e043bf4f4d07084bcd724352a informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2009.pdf
+d34d5c6837d7faece80bef5ed17d5a4f02b1f785 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2009.pdf
+aa597d9063740aadb2eb48ea1e66245802c515ee informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2009.pdf
+1912af6b6fe1defe86019b93855d3cd290743480 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2009.pdf
+0ade2dc8f1d0e201e0fe41ea81c8c2f28b4e534b informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/dados
+0db3defd87b2924605f626b62e84e44c92a54102 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/dados/md5_microdados_ed_superior_2009.txt
+bee2d93ae88804b9f1e542e1ec7590e337a8328f informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/leia-me
+aad605d39409678fa4181cd3cab1c2c9f285b4f3 informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/leia-me/Leia_me.pdf
+aaf0f7e1686216e4503e4d491ab961dac83b284a informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/leia-me/Nota informativa.pdf
+e204d4658b4755f020d931dd86f0bf68828861ea informacao/dados/bruto/INEP_2009-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2009/leia-me/~$eia_me.doc
+1c2d23de2e135d680021bd87e9536cd30607f9cf informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO
+055daf4a68626b68093904f4e73110a2c6050010 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO.zip
+277a15e481eb3fe2413b81158982b301708381d6 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010
+8e91c1176498c3c09c137b3056363d23e288b0a7 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos
+ba49173fcf1d1f33a8b22610159b1d0beb6f5e7e informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+8e675042975fc2c11d1c08f5119c4ffe3532da78 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2010.pdf
+b6a64d06b7a3832da04c9767bc4d43bfaddef938 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2010.pdf
+cf1b18b09f6b8409e73ee147d94cc4079c1a91b9 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2010.pdf
+a73f8112598fa65d8c942a6b91a480f3f99c1c79 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2010.pdf
+82a08845f0138c99f2bd1d384a089d9d6fb3efc5 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/dados
+8f27d43476b898ae00521246553c5722e6ca84d1 informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/dados/md5_microdados_ed_superior_2010.txt
+ac57df1c489229fece88d44bbaed7fc19578bd8e informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/leia-me
+0e950f27d099c30a35788a727e742ac6b3c78fdb informacao/dados/bruto/INEP_2010-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2010/leia-me/Leia_me.pdf
+6fbc1f890b2b8bcee92406d842d2e5291b4a3a75 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO
+afe32ab28481392a73d96dbfee5fa68c0716e79f informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO.zip
+ff8d4825b251f9ff9cd20eada205292b94e6a67a informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011
+da97339d95bd5ea574be222d44b49c51f850dc0b informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos
+d5dd6972ae6495ee1cb003e94ae14afb5339fe45 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+1eb0aaea3cbe48123e2cdea4c550e6979f4e77d7 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2011.pdf
+721f7fabd625c226713b556214b707b63c4762cf informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2011.pdf
+271d5330894198c4fd320e64a30989a44f15e8ce informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2011.pdf
+c4335e2705f1cd8ef7ce0bdaf4e8dcdba3a819ee informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2011.pdf
+87555446e4e8eb9abc6055d59404dd22669554b4 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/dados
+d31133294cdf8918023f899c46de94a830f630a0 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/dados/md5_microdados_ed_superior_2011.txt
+d9b32ff644224af31888e0c2f399ba224ef910b5 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/leia-me
+bebb4fc03bdad520187b8ec028300e068d17aa03 informacao/dados/bruto/INEP_2011-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2011/leia-me/Leia_me.pdf
+5b6939a1e931271d0f90a4da7e9a032dbc58e1c8 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO
+3c7ac3c0dfefeeb942d41b34a90274863466be0b informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO.zip
+1efcb5688630f233f987619e662a7b852578e45c informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012
+2d623eb18a10a7dec330177e5b7bcc8ea595914c informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos
+56e567ab84fc5882a8cb7a1f9de2c4984c01e679 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+2614caa0cbc32f9c01a88fe5ac9eea3c256758eb informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2012.pdf
+890e7fbe1e2cb53f4b4bb5c1b98cbd8690ea1779 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2012.pdf
+2d185573ba9a0cc02b3ada11a68b2e5f0ae8ee93 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2012.pdf
+9b68e2953dc2ce6da37f4b3e5858aaf150d6bcdf informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2012.pdf
+f6a1f5e1566848574d259d351d0a86ed27cbc12e informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/dados
+ed2e80d13432d2de3975cb3a9d2ae64b3fc9794c informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/dados/md5_microdados_ed_superior_2012.txt
+12d6034317eb4596ba0229e87df3611efd18fa58 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/leia-me
+be097dea12da3e227f8194ddc1e9a378e8a8a6d5 informacao/dados/bruto/INEP_2012-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2012/leia-me/Leia_me.pdf
+63c4fff2518ca520bb20f7c98bddde811583b782 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO
+ae5f996899b0eafbf9b70c2ac22f4f97a8d4c814 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO.zip
+f9a36ae97e7d9adfd0873c010cfeeb4add384f8c informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013
+16923118f24e5b3670deb883c962268ed3a0fe8d informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos
+56dcbd640d94abbe48eda61cfe8b24da86db5aaf informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Superior
+b7af86f94b0780f534a330f2692b63fdc6b6ab3b informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO ALUNO 2013.pdf
+dfb1e100309224d37646fcd51a6724135b5183d7 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO CURSO 2013.pdf
+ffb6b43b0eb7ec12fef8499cc42edaa21b06c872 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO DOCENTE 2013.pdf
+1ed6cb441fb7fb7f71a7609921b790f8b8676685 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO IES 2013.pdf
+79c233eed39596fbc27a9017ff7d79daec12f064 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/dados
+0fe69f2d66a6d6cc3e85ba64ba25a41d810dcac8 informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/dados/md5_microdados_ed_superior_2013.txt
+8350e65705ef4b7565f64f4e2c7436652ac6304d informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/leia-me
+6f4dd4c797a03aba4303392635349139669b8c6d informacao/dados/bruto/INEP_2013-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2013/leia-me/Leia_me.pdf
+28769bd83a75e2be1a27116dcb98efdaf6b96de3 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO
+a1c80995679c6fe2ed6853089b586693c4eecd01 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO.zip
+31d3623e11ee09e5b577ff8455abae1cb1eb91a8 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014
+6dbf5ba13bbec1dd8dd67f176ffe5aacda69c5c0 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos
+5aa9e1305d9d57c1e9f395f9360d3194a2bceb9d informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+da9fb15e2ba8e391c83c1313cf92377d9f5a5b7c informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2014.pdf
+a7cfb289000adcee21799f2875cdd9ede5c95114 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2014.pdf
+36f835578e5d125ea9c166a626e83a3c5e7562e7 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2014.pdf
+31733fd8893f03f443b3a722035f0f1059be12e6 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2014.pdf
+11efef4c4788cb3e3cde8891a9b3cb3d6826708f informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/dados
+6a38561a1a60f341df20518758a9b1eb667e71a5 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/dados/md5_microdados_ed_superior_2014.txt
+b0e4b79fcf6eaa08588042f5e349b107837ffc18 informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/leia-me
+8a34da75eed85871eddf697ac52bad204aa0ac2c informacao/dados/bruto/INEP_2014-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2014/leia-me/Leia_me.pdf
+d3298dc6195722f83ac86b9683c6abe4c63085c1 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO
+316b93b6616ad1fa03918dedc88d027b74c13141 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO.zip
+19411a83755247ce501d2abeff9ef5c59812856b informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015
+ade83916747a21b6c7cc99205a2c56ef1b0eaf40 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos
+9dd199a051e01a506e51955cecf0a0858159d761 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+40ed36c14f22a47581c815f86aa348dfbdc0884f informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2015.pdf
+793a1b2044a264426b0d7ea49baa03b867c677e2 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2015.pdf
+8aa038142905cc592d6d6364946961071209e4a4 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2015.pdf
+be6e7714e79a2c81f77ba83852f0b4ac19198f3b informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2015.pdf
+0d63c23fb0e9f61a73dc5d730b4f232e67cf78e3 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/dados
+6a890cf40d38cbe67724e154f5e187e023b71564 informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/dados/md5_microdados_ed_superior_2015.txt
+7ffcd454211bd20a7a0d24706d38a945b0868a4e informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/leia-me
+818037cda52d2dd5e95ce34706f859fb2f4af87d informacao/dados/bruto/INEP_2015-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2015/leia-me/Leia_me.pdf
+ac43c36e609b4b41a4ce22ed065222c066bb6e34 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO
+f2eabea217c6749718d24dfe2ce1e04b3253fc7f informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO.zip
+bb49a6d58c6fc12f58b4cb9b44db421a792417d4 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016
+ebd0e7c420a0fa95921ced68d7f103d36120f0f7 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos
+bbc6f44e19ef9189036b359f28a1c58df7f7f02d informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+dc0dd50bf570e87c990744dbb24840a7c72817b3 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2016.pdf
+f4e14add28619b3edec93676fa2c177f5281a51e informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2016.pdf
+c9b10aa3144e4231f3e0254df26ce3f7bf8df472 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2016.pdf
+2842dc690569593344686aabc0a1e7d35cbe833a informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2016.pdf
+1bc0300151b69af773ad481e9ba6ad17950f8d17 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/dados
+fbaf0829d1bff288d86a6fb49e00ee7b40845924 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/dados/md5_microdados_ed_superior_2016.txt
+2f724288566723eb068810e023772b14c9261782 informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/leia-me
+b757106479a1e9b033458fe9cb8a81adedcfa45d informacao/dados/bruto/INEP_2016-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2016/leia-me/Leia_me.pdf
+484d7b7a4bc6c28634ebf008ad4458675162ebf0 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO
+9fccec9a9af1ca7c6f8a6b23fad3ea5c97bb214d informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO.zip
+47998e51a788a677acfaeb84573e5366a440d8c3 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017
+31291a8cce8f18ff9c422b6086fb8600cb03fcd4 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos
+efa5efc335be1e3372e90c500a2174a8b5a84003 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+2d1f2a7641ae6a2f06ab8d4b586b59cfc704cf72 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2017.pdf
+35d041ab0bb6d33589033e892670ac0966eaf595 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2017.pdf
+f740c0a69fb5b3a202126f35ff289c3c732ceaaa informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2017.pdf
+af42a0031ae28aca7fcb4c6db5ab6495d0ef85e1 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2017.pdf
+dbeaca02a8a3440ba44f5ec7f9b78b96c6478e04 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/dados
+078b441e2d42493548e3d04e016a8ff2df82a40c informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/dados/md5_microdados_ed_superior_2017.txt
+21b1e1cbb9da9b99fa3a1c10c207733576e34019 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/leia-me
+0c2892880ae54f937ac38683ac61bfbb8df033d8 informacao/dados/bruto/INEP_2017-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2017/leia-me/Leia_me.pdf
+4a50025670160b0f7f3a3573c0a841cdc78cbfb2 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO
+f408cbbdfced7f25a716b0c14312b196dacf2a84 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO.zip
+50b68a3f01de7350757c19d05dddee32f522d014 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018
+a7f58154c2a1e4629ee7b9d86786314b547a7547 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos
+7c680c7727c728a51f1a4f622389241e1dda6a71 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+32259e99cd1409a448fe506ebeebd0689ff23a0c informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2018.pdf
+04c9daeb7b7c27ab58b8a9fa0f861d63902221f0 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2018.pdf
+da2a10220df80034cbe3267fbe6e931822f95ea5 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2018.pdf
+693cc44984bc644934dee7095989eb0a4b0e7e11 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2018.pdf
+b8889b0fc3f2c907512aba10154eceaffa361772 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/dados
+0b95cd28c2f2f61bd508ecbc7357ab7c0a4bf146 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/dados/md5_microdados_ed_superior_2018.txt
+44fdc3b60622e3ada4fd11636fb8529bf101b067 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/leia-me
+0312e6befbc66c8b089c4152c658148e3a193ce2 informacao/dados/bruto/INEP_2018-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2018/leia-me/Leia_me.pdf
+42dbf2ef01dc32fdc717e626efcbd5a3583744c4 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO
+9aa475e7078908d9ce9e7a33c3a394ffa75f7a0c informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO.zip
+d644b4552dc07967573ce800642caea75d19dfb3 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019
+637afadb8b9e58bb27cc57cf0ecbaa75b7ab1e00 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos
+a06b3929083b4dbbfd1e6d047ac9c6e187ac59c3 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+9aabf00a5bab3a76b87424477fc495086d2bf9e3 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2019.pdf
+d0ea45b78df68cceea2d6233aa1603c6afa31e66 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2019.pdf
+64a7c118889343575874b1be0f41c0632060ba06 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2019.pdf
+adc5966e1acef6cd893594c0e8ff5369d6641dac informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2019.pdf
+ac17bfd5ad18ed49d13bfa362f1f790f248d645d informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/dados
+7f79e88027ef0256a669553b6413e0b70d2cc845 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/dados/md5_microdados_ed_superior_2019.txt
+9057325849fbfda783f7d8941f740465d6d6fe77 informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/leia-me
+10cd1fc534ca82b517d6fa4ee76aadc6e7c9ae3c informacao/dados/bruto/INEP_2019-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2019/leia-me/Leia_me.pdf
+034742b3aa1634b9d40c470f5849888c1a967323 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO
+c78e59a5d2ec33a43c0d2c8cbcd8cbea3ed51c1c informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO.zip
+9592daf4765d1d757467ac593ddf3ad72b65267a informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020
+971b35ec6ed60f4ba8a27bc336c35925425c914e informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos
+efff9384e9c0c9b9d96eca33fcdb58c9e528a39f informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO I - Dicionário de Dados
+5c697fb4f5f9ea605748ddfc52ece6979b662248 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO I - Dicionário de Dados/dicionário_dados_educaç╞o_superior.xlsx
+729e1609ec012f9ba9201a33fc74d0229d49c255 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+da4031737880a0e048a866e6037508cd2bc79479 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2020.pdf
+2f81a481c8176c00c027122aef144332eafd3369 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2020.pdf
+dcf8c7009e9ea4e18838372d104c321d98d6b2fa informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2020.pdf
+4b18d61cf9317527897bc7a3311fd61f36a109cd informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2020.pdf
+53047ff0f7896785b7015b3e2e83146d96b837f2 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/dados
+b2689dc7f350cf169f55006a223a6e7b63bf3c4a informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/dados/md5_microdados_ed_superior_2020.txt
+00aa648bd2cc962a9c1ba8e8ca9dc89cf01732c1 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/leia-me
+f5ef1096dc2c35fecd76b846715bf6800a17eeda informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/leia-me/Leia_me.pdf
+6401803093bcd2b3b720b2a1e7052e789efe2d17 informacao/dados/bruto/INEP_2020-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2020/leia-me/~$eia_me.docx
+9275acc4783cb7eed46279a8441448c6fcb86c2c informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO
+9aafcaef19b98254e070586fae0eb0a662da16d7 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO.zip
+13dbfbba68d48617647885cad36511b2fe1bcb50 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021
+15288768a386db12b275874a6b86c08cde3f828f informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos
+1a3b40bdf5a53b89820c0a07f080d59bb51b2eff informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO I - Dicionário de Dados
+eb852eafcf0ff187d51caa184f61d2f7feeb5a1f informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO I - Dicionário de Dados/Thumbs.db
+a51a136fbb670f8655881b21de056e9be32ce485 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO I - Dicionário de Dados/dicionário_dados_educaç╞o_superior.xlsx
+9a18694397a2e93ea5aa013228cec5ab5339a0ec informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica
+f3604bb8456291b0e5e7c47bba914f042f8b9fe1 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO ALUNO 2021.pdf
+3399bc48949ef3b884c46d911db55e85de7da952 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO CURSO 2021.pdf
+c3cb56f48b152d5bf1581963de00b101caafb1e7 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO DOCENTE 2021.pdf
+8f3e95bf0a0e3bb47a12d68846176105ea09431b informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/Anexos/ANEXO II -  Questionários do Censo da Educaç╞o Basica/ANEXO II - MαDULO IES 2021.pdf
+b78147053316cc2b0a11992b6a31a34f86418add informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/dados
+f44a3cf61e4dce87a756a4ebef31c4685ef53081 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/dados/md5_microdados_ed_superior_2021.txt
+e95b1644e58b94298657344b95fc77b4e83986db informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/leia-me
+cb2d64ece28d68be72a0d1f9bf567c42c6d15ac5 informacao/dados/bruto/INEP_2021-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2021/leia-me/Leia_me.pdf
+6da7091b3b18c814f1a1e0940b53ac1bdb5853e0 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO
+40e5ffbd679eb000031fe8884086814e978bd0e7 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO.zip
+79751c3ce51275d0ff3da599aa1ad0f8e46e638c informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022
+8f3cc16d69e692e7d2e0950defcc1f5462dfb0b1 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos
+a3456ad26e72bba4e99baa45f2ede15b519e4121 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO I - Dicionário de Dados
+66a07a24d1226b1df2dc951a6a564a852a4b6001 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO I - Dicionário de Dados/dicionário_dados_educaç╞o_superior.xlsx
+232d932a888f2a9aaf6ab2ff126234aa8d1b28b7 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO II - Questionários do Censo da Educaç╞o Superior
+a701a46b1498ef389488643d4e5a8a521a2ad9da informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO II - Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO ALUNO 2022.pdf
+c6d926cdec4fb7a66d076212324a04da0c02b821 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO II - Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO CURSO 2022.pdf
+beeddb0aa793b7ebbf3492e9908cd4c38476bcf6 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO II - Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO DOCENTE 2022.pdf
+cf4894b47923e4dcdc81a93c7188f0ad38c1c457 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/Anexos/ANEXO II - Questionários do Censo da Educaç╞o Superior/ANEXO II - MαDULO IES 2022.pdf
+3d7f8cc65d4a6e76b490fb82f1325565210978f2 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/dados
+33797328d3aa1e229bade002086db2a9621162b6 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/dados/md5_microdados_ed_superior_2022.txt
+479f109a21f1ccc378a774d00dc91f11051d8345 informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/leia-me
+3c6e6fbc5e645ad81c2466979d149e85d151f95e informacao/dados/bruto/INEP_2022-MICRODADOS-CENSO/microdados_educaç╞o_superior_2022/leia-me/Leia_me.pdf
+13cbaec805e614c7859c49db1c711f809666aaa9 informacao/dados/bruto/lista-links.txt
+3560106ef4b210398617a347aa8f4c9b73eb4033 informacao/documentos
+73a450ea83352ea7594cb4ebe9132753e3ca5813 informacao/documentos/diagramas
+3a0a70d6f7954f421c930788897321903674f381 informacao/modelos
+3bccf6dd6095c824e84ffaf21e868783fe6d9937 informacao/modelos/resultados_modelos
+abc8b481f8bcf82c1e3eacb4da55e94fed712c6b informacao/modelos/resultados_modelos/metricas.txt
+4929c6701baa30bed6b8389cc6f3a60b3094ef0a informacao/notebooks
+bdad1ebe00729908204ca5c2a82fdb21603eb942 informacao/notebooks/analise_resultados
+9876fa80f4818a27ca8065ae2a1d45a7c972cd89 informacao/notebooks/analise_resultados/visualizacao_resultados.ipynb
+57b909eac06ce966261ab1786580f4b3f6b23120 informacao/notebooks/exploracao_dados
+bd21c23fb32e8f93cf17733c6e1310f4c02b02af informacao/notebooks/exploracao_dados/exploracao_dados.ipynb
+9d0886e6faee8f41a5307eb6e3dc29e1bc37eaa3 informacao/notebooks/modelagem
+0335605c94ef9cb75db45d4a1efb7f7b5433643f informacao/notebooks/modelagem/ajuste_hiperparametros.ipynb
+388880664ab43f09b05c22c616dee3b10bb21874 informacao/notebooks/modelagem/treinamento_modelo.ipynb
+554ce4ff41fccdf0873f9fd60c0b78c2b14b9f58 informacao/notebooks/pre_processamento
+ff95cdcf5e906f1006c684cb280fadc38673d51d informacao/notebooks/pre_processamento/limpeza_dados.ipynb
+d3888f1f781086f81f889b439b285020b50850a4 informacao/relatorios
+c6342e8f54e48abca41d23526570ec27b2fe2761 informacao/relatorios/figuras
+89c31e47b55c826d219157def886eb89ae93a903 informacao/relatorios/logs
+2d5374ead5c76a52fe95d8dbbec20feee2f29ab0 informacao/relatorios/logs/log_treinamento.txt
+8ae06502851ffe10ebe9deb1983c6dddcb1df58e informacao/scripts
+350bee15ac3d85d21f91f539c315ac392109fea4 informacao/scripts/coleta_dados
+5582d7404a024b11e7b691222d2a5643dd7a1406 informacao/scripts/coleta_dados/coleta_dados_oficiais.py
+7f6a49eaa232c1a89b35071663bcdc3bb4d76a9b informacao/scripts/coleta_dados/coletar_links_inep.py
+6d1a7e81cdfd8ddd3ca63f4e4acbc642b9ed9b0c informacao/scripts/coleta_dados/raspagem_web
+46a1867d5ca4a33188bedeb74504b69c334d8b7d informacao/scripts/modelagem
+a3f2cbe8eb388c6ef864fc1a23547b16ff2a1474 informacao/scripts/modelagem/treinamento_modelo.py
+d86597783a3bcf151507c42ef464578a51a03ba2 informacao/scripts/processamento_dados
+d503f4a0a4df620024a4fb4a44d3030c32cd04e6 informacao/scripts/processamento_dados/pre_processamento.py
+e4bdbb8a235fd4db46d5c476fc852a63b4fabce6 informacao/scripts/processamento_dados/processamento_dados
+9ed8a0991e0b9db925e9668049fd0ff07e220382 informacao/scripts/processamento_dados/processamento_dados/tratar_dados.py
+0cf86a27d76224d2c9650562960a58fd4d1a4fde informacao/scripts/visualizacao
+b7eef977313dff21776bc8b7d24768e2d086c09a informacao/scripts/visualizacao/gerar_graficos.py
+68f8cddc10496fb92223d24aeeb76505c88ddfe5 log_erros.txt

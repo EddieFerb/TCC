@@ -1,0 +1,66 @@
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/DADOS/GRADUACAO_PRESENCIAL.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 788, saw 2
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/DADOS/GRADUACAO_PRESENCIAL.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 15561, saw 3
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/DADOS/GRADUACAO_PRESENCIAL.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 10008, saw 2
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/DADOS/GRADUACAO_PRESENCIAL.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 6031, saw 3
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/DADOS/INSTITUICAO.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 416, saw 3
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/DADOS/INSTITUICAO.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 337, saw 4
+
+Arquivo: /Users/eddieferb/informacao/dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/DADOS/GRADUACAO_PRESENCIAL.CSV, Erro: Error tokenizing data. C error: Expected 1 fields in line 5324, saw 3
+
+Arquivo: ./dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/dados/MICRODADOS_ED_SUP_IES_1995.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/dados/MICRODADOS_CADASTRO_CURSOS_1995.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/dados/MICRODADOS_ED_SUP_IES_1996.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/dados/MICRODADOS_CADASTRO_CURSOS_1996.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/dados/MICRODADOS_ED_SUP_IES_1997.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/dados/MICRODADOS_CADASTRO_CURSOS_1997.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/dados/MICRODADOS_ED_SUP_IES_1998.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/dados/MICRODADOS_CADASTRO_CURSOS_1998.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/dados/MICRODADOS_ED_SUP_IES_1999.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/dados/MICRODADOS_CADASTRO_CURSOS_1999.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/dados/MICRODADOS_ED_SUP_IES_2000.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/dados/MICRODADOS_CADASTRO_CURSOS_2000.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/dados/MICRODADOS_ED_SUP_IES_2001.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/dados/MICRODADOS_CADASTRO_CURSOS_2001.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/dados/MICRODADOS_ED_SUP_IES_2002.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/dados/MICRODADOS_CADASTRO_CURSOS_2002.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/dados/MICRODADOS_ED_SUP_IES_2003.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/dados/MICRODADOS_CADASTRO_CURSOS_2003.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/dados/MICRODADOS_ED_SUP_IES_2004.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/dados/MICRODADOS_CADASTRO_CURSOS_2004.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/dados/MICRODADOS_ED_SUP_IES_2005.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/dados/MICRODADOS_CADASTRO_CURSOS_2005.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/dados/MICRODADOS_ED_SUP_IES_2006.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/dados/MICRODADOS_CADASTRO_CURSOS_2006.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/dados/MICRODADOS_ED_SUP_IES_2007.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/dados/MICRODADOS_CADASTRO_CURSOS_2007.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/dados/MICRODADOS_ED_SUP_IES_1995.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1995-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1995/dados/MICRODADOS_CADASTRO_CURSOS_1995.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/dados/MICRODADOS_ED_SUP_IES_1996.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1996-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1996/dados/MICRODADOS_CADASTRO_CURSOS_1996.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/dados/MICRODADOS_ED_SUP_IES_1997.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1997-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1997/dados/MICRODADOS_CADASTRO_CURSOS_1997.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/dados/MICRODADOS_ED_SUP_IES_1998.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1998-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1998/dados/MICRODADOS_CADASTRO_CURSOS_1998.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/dados/MICRODADOS_ED_SUP_IES_1999.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_1999-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 1999/dados/MICRODADOS_CADASTRO_CURSOS_1999.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/dados/MICRODADOS_ED_SUP_IES_2000.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2000-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2000/dados/MICRODADOS_CADASTRO_CURSOS_2000.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/dados/MICRODADOS_ED_SUP_IES_2001.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2001-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2001/dados/MICRODADOS_CADASTRO_CURSOS_2001.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/dados/MICRODADOS_ED_SUP_IES_2002.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2002-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2002/dados/MICRODADOS_CADASTRO_CURSOS_2002.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/dados/MICRODADOS_ED_SUP_IES_2003.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2003-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2003/dados/MICRODADOS_CADASTRO_CURSOS_2003.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/dados/MICRODADOS_ED_SUP_IES_2004.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2004-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2004/dados/MICRODADOS_CADASTRO_CURSOS_2004.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/dados/MICRODADOS_ED_SUP_IES_2005.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2005-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2005/dados/MICRODADOS_CADASTRO_CURSOS_2005.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/dados/MICRODADOS_ED_SUP_IES_2006.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2006-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2006/dados/MICRODADOS_CADASTRO_CURSOS_2006.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/dados/MICRODADOS_ED_SUP_IES_2007.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
+Arquivo: ./dados/bruto/INEP_2007-MICRODADOS-CENSO/Microdados do Censo da Educaç╞o Superior 2007/dados/MICRODADOS_CADASTRO_CURSOS_2007.CSV, Erro: The 'low_memory' option is not supported with the 'python' engine
