@@ -4,10 +4,15 @@ from pathlib import Path
 import re
 import glob
 import numpy as np
+<<<<<<< Updated upstream
 
 # Defina a variável global para a pasta processada
 PASTA_PROCESSADO = "./dados/processado"
+=======
+>>>>>>> Stashed changes
 
+# Defina a variável global para a pasta processada
+PASTA_PROCESSADO = "./dados/processado"
 def carregar_dados(caminho_entrada):
     """
     Carrega os dados de um arquivo CSV.
