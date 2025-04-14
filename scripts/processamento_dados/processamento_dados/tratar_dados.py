@@ -2,6 +2,11 @@ import os
 import pandas as pd
 from pathlib import Path
 import re
+import glob
+import numpy as np
+
+# Defina a variável global para a pasta processada
+PASTA_PROCESSADO = "./dados/processado"
 
 def carregar_dados(caminho_entrada):
     """
@@ -58,7 +63,7 @@ def pivotar_dados_cursos():
     arquivos = sorted(Path("./dados/processado").glob("dados_cursos_tratado_*.csv"))
     dfs = []
     for arq in arquivos:
-        ano_match = re.search(r"(\\d{4})", arq.name)
+        ano_match = re.search(r"(\d{4})", arq.name)
         if not ano_match:
             continue
         ano = int(ano_match.group(1))
@@ -85,6 +90,75 @@ def pivotar_dados_cursos():
     df_final = df_final.join(df_pivot).reset_index()
 
     salvar_dados_tratados(df_final, "./dados/processado/dados_cursos_serie_temporal.csv")
+
+# ==========================================================================
+# FUNÇÃO NOVA: CÁLCULO E SALVAR TAXAS
+# ==========================================================================
+
+def calcular_taxas(df):
+    """
+    Calcula as taxas de ingresso, conclusão e evasão.
+    Suponha que o DataFrame possua as seguintes colunas:
+        - 'ingressantes': número de alunos que ingressaram
+        - 'concluintes': número de alunos que concluíram
+        - 'vagas_totais': número de vagas ofertadas
+    As taxas são calculadas como:
+        - taxa_ingresso = ingressantes / vagas_totais
+        - taxa_conclusao = concluintes / ingressantes
+        - taxa_evasao = 1 - taxa_conclusao
+    Caso haja divisão por zero, o resultado será NaN.
+    """
+    df = df.copy()
+    for coluna in ['ingressantes', 'concluintes', 'vagas_totais']:
+        if coluna in df.columns:
+            df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
+    df['taxa_ingresso'] = df['ingressantes'] / df['vagas_totais'].replace(0, pd.NA)
+    df['taxa_conclusao'] = df['concluintes'] / df['ingressantes'].replace(0, pd.NA)
+    df['taxa_evasao'] = 1 - df['taxa_conclusao']
+    return df
+
+def salvar_taxas_consolidadas():
+    """
+    Consolida todos os arquivos de dados de cursos tratados (dados_cursos_tratado_*.csv)
+    localizados na pasta processado, calcula as taxas e salva o DataFrame resultante
+    como 'dados_ingresso_evasao_conclusao.csv' na pasta dados/processado.
+    """
+    pattern = os.path.join(PASTA_PROCESSADO, "dados_cursos_tratado_*.csv")
+    files = glob.glob(pattern)
+    if not files:
+        print("Nenhum arquivo de cursos tratado foi encontrado para consolidar.")
+        return
+    list_df = []
+    for f in files:
+        try:
+            df_temp = pd.read_csv(f, sep=";", encoding="utf-8")
+            list_df.append(df_temp)
+        except Exception as e:
+            print(f"Erro ao ler o arquivo {f}: {e}")
+    if not list_df:
+        print("Nenhum dado foi carregado para consolidação.")
+        return
+    df_consolidado = pd.concat(list_df, ignore_index=True)
+    df_consolidado = calcular_taxas(df_consolidado)
+    caminho_saida = os.path.join(PASTA_PROCESSADO, "dados_ingresso_evasao_conclusao.csv")
+    salvar_dados_tratados(df_consolidado, caminho_saida)
+    print(f"[OK] Dados consolidados e taxas salvos em: {caminho_saida}")
+
+def ler_taxas_consolidadas():
+    """
+    Lê e retorna o DataFrame salvo no arquivo 'dados_ingresso_evasao_conclusao.csv' localizado na pasta processado.
+    """
+    caminho = os.path.join(PASTA_PROCESSADO, "dados_ingresso_evasao_conclusao.csv")
+    try:
+        df = pd.read_csv(caminho, sep=";", encoding="utf-8")
+        print("Dados consolidados lidos com sucesso.")
+        return df
+    except Exception as e:
+        raise ValueError(f"Erro ao ler o arquivo de taxas consolidadas: {e}")
+
+# ==========================================================================
+# PROCESSAMENTO PRINCIPAL
+# ==========================================================================
 
 def main(year: int = 2024):
     """
@@ -165,3 +239,10 @@ if __name__ == '__main__':
 
     # Pivotar dados de cursos ao final do processamento
     pivotar_dados_cursos()
+
+    # Calcular e salvar as taxas consolidadas
+    salvar_taxas_consolidadas()
+
+    # Opcional: Ler e retornar as taxas consolidadas
+    df_taxas = ler_taxas_consolidadas()
+    print(df_taxas.head())

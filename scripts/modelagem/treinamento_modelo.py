@@ -1,4 +1,4 @@
-# /Users/eddieferb/informacao/scripts/modelagem/treinamento_modelo.py
+# /scripts/modelagem/treinamento_modelo.py
 # Este script treina modelos de aprendizado de máquina para prever a taxa de evasão,
 # bem como explorar as relações entre taxa de ingresso, taxa de evasão e taxa de conclusão,
 # e realizar previsões para ingressantes e concluintes.
@@ -7,14 +7,20 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, confusion_matrix
 import joblib
 import os
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def main():
     # Caminho para os dados processados
-    caminho_dados = '/dados/processado/dados_ingresso_evasao_conclusao.csv'
-    df = pd.read_csv(caminho_dados)
+    caminho_dados = './dados/processado/dados_ingresso_evasao_conclusao.csv'
+    df = pd.read_csv(caminho_dados, sep=';', encoding='utf-8', low_memory=False)
+    
+    # Definir caminho_modelo (com caminho relativo) antes de utilizá-lo em qualquer parte
+    caminho_modelo = './modelos/modelos_salvos'
+    os.makedirs(caminho_modelo, exist_ok=True)
     
     # Treinamento para prever ingressantes e concluintes
     if all(col in df.columns for col in ['numero_cursos', 'vagas', 'inscritos', 'docentes', 'ingressantes', 'concluintes']):
@@ -44,8 +50,6 @@ def main():
         print(f"Score para concluintes: {score_concluintes:.4f}")
 
         # Salvar modelos de ingressantes e concluintes
-        caminho_modelo = '/Users/eddieferb/informacao/modelos/modelos_salvos'
-        os.makedirs(caminho_modelo, exist_ok=True)
         joblib.dump(modelo_ingressantes, os.path.join(caminho_modelo, 'modelo_ingressantes.pkl'))
         joblib.dump(modelo_concluintes, os.path.join(caminho_modelo, 'modelo_concluintes.pkl'))
     
@@ -86,14 +90,28 @@ def main():
     joblib.dump(melhor_modelo, os.path.join(caminho_modelo, 'modelo_melhor_evasao.pkl'))
 
     # Salvar as métricas dos modelos
-    caminho_metricas = '/Users/eddieferb/informacao/modelos/resultados_modelos'
+    caminho_metricas = './modelos/resultados_modelos'
     os.makedirs(caminho_metricas, exist_ok=True)
     with open(os.path.join(caminho_metricas, 'metricas_modelos.txt'), 'w') as f:
         f.write(f"Modelo: {nome_melhor_modelo}\n")
         f.write(f"MSE - Regressão Linear: {mse_linear:.4f}, R²: {r2_linear:.4f}\n")
         f.write(f"MSE - Random Forest: {mse_rf:.4f}, R²: {r2_rf:.4f}\n")
         f.write(f"Melhor Modelo Selecionado: {nome_melhor_modelo}\n")
-
+    
+    # Geração da Matriz de Confusão (binarizando a taxa de evasão com threshold de 0.5)
+    threshold = 0.5
+    y_test_class = (y_test >= threshold).astype(int)
+    y_pred_class = (melhor_modelo.predict(X_test) >= threshold).astype(int)
+    cm = confusion_matrix(y_test_class, y_pred_class)
+    plt.figure(figsize=(6, 4))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    plt.title(f"Matriz de Confusão - {nome_melhor_modelo}")
+    plt.xlabel("Predito")
+    plt.ylabel("Verdadeiro")
+    caminho_cm = os.path.join(caminho_metricas, 'matriz_confusao.png')
+    plt.savefig(caminho_cm)
+    plt.close()
+    
     print(f"Treinamento concluído. Melhor modelo para evasão: {nome_melhor_modelo}")
     print(f"Métricas salvas em: {caminho_metricas}")
     print(f"Modelos salvos em: {caminho_modelo}")

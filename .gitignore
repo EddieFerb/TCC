@@ -2,17 +2,18 @@
 # Dados e arquivos sensíveis
 # ============================
 # Evite versionar dados brutos, intermediários, processados, e arquivos externos
-informacao/dados/
-informacao/dados/bruto/
-informacao/dados/intermediario/
-informacao/dados/processado/
-informacao/dados/externo/
+dados/
+dados/bruto/
+dados/intermediario/
+dados/processado/
+dados/externo/
+dados/bruto/INEP_*/
 
 # ============================
 # Modelos e resultados gerados (não versionar modelos treinados, que podem ser grandes ou sensíveis)
 # ============================
-informacao/modelos/modelos_salvos/
-informacao/modelos/resultados_modelos/
+modelos/modelos_salvos/
+modelos/resultados_modelos/
 
 # ============================
 # Logs e arquivos temporários
