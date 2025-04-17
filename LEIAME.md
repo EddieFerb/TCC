@@ -1,74 +1,213 @@
-Informacao-UEL/
-├── dados/
-│   ├── bruto/
-│   │   ├── INEP_1995-2022-MICRODADOS-CENSO /
-│   │   │    └── DADOS
-│   │   │    └── Leia-me
-│   │   └── INEP_1995-2022-MICRODADOS-ZIP
-│   │   
-│   ├── processado/
-│   │   ├── ies_dados_limpos.csv
-│   │   └── caracteristicas_selecionadas.csv
-│   ├── externo/
-│   │   └── inep_dados_2020.csv
-│   └── intermediario/
-│       └── dados_temp.pkl
-├── notebooks/
-│   ├── exploracao_dados/
-│   │   └── exploracao_dados.ipynb
-│   ├── pre_processamento/
-│   │   └── limpeza_dados.ipynb
-│   ├── modelagem/
-│   │   ├── treinamento_modelo.ipynb
-│   │   └── ajuste_hiperparametros.ipynb
-│   └── analise_resultados/
-│       └── visualizacao_resultados.ipynb
-├── scripts/
-│   ├── coleta_dados/
-│   │   └── coleta_dados_oficiais.py
-│   ├── processamento_dados/
-│   │   └── pre_processamento.py
-│   ├── modelagem/
-│   │   └── treinamento_modelo.py
-│   └── visualizacao/
-│       └── gerar_graficos.py
-├── modelos/
-│   ├── modelos_salvos/
-│   │   └── modelo_random_forest.pkl
-│   └── resultados_modelos/
-│       ├── metricas.txt
-│       └── matriz_confusao.png
-├── relatorios/
-│   ├── figuras/
-│   │   ├── figura1.png
-│   │   └── figura2.png
-│   ├── tabelas/
-│   │   └── tabela1.csv
-│   └── logs/
-│       └── log_treinamento.txt
-├── artigo/
-│   ├── manuscrito/
+tree -L 3
+.
+├── allfiles.txt
+├── ambiente
+│   ├── ambiente.yml
+│   └── requisitos.txt
+├── artigo
+│   ├── manuscrito
 │   │   ├── artigo.docx
-│   │   ├── secoes/
-│   │   │   ├── introducao.docx
-│   │   │   ├── metodologia.docx
-│   │   │   └── resultados.docx
-│   │   ├── referencias/
-│   │   │   └── referencias.bib
-│   │   └── figuras/
-│   │       ├── figura1.tif
-│   │       └── figura2.tif
-│   └── submissao/
+│   │   ├── figuras
+│   │   ├── referencias
+│   │   └── secoes
+│   └── submissao
 │       ├── artigo_final.docx
 │       └── checklist_submissao.pdf
-├── documentos/
-│   └── diagramas/
-│       └── fluxo_dados.png
-├── ambiente/
-│   ├── requisitos.txt
-│   └── ambiente.yml
+├── dados
+│   ├── bruto
+│   │   ├── INEP_2009-MICRODADOS-CENSO
+│   │   ├── INEP_2009-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2010-MICRODADOS-CENSO
+│   │   ├── INEP_2010-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2011-MICRODADOS-CENSO
+│   │   ├── INEP_2011-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2012-MICRODADOS-CENSO
+│   │   ├── INEP_2012-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2013-MICRODADOS-CENSO
+│   │   ├── INEP_2013-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2014-MICRODADOS-CENSO
+│   │   ├── INEP_2014-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2015-MICRODADOS-CENSO
+│   │   ├── INEP_2015-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2016-MICRODADOS-CENSO
+│   │   ├── INEP_2016-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2017-MICRODADOS-CENSO
+│   │   ├── INEP_2017-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2018-MICRODADOS-CENSO
+│   │   ├── INEP_2018-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2019-MICRODADOS-CENSO
+│   │   ├── INEP_2019-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2020-MICRODADOS-CENSO
+│   │   ├── INEP_2020-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2021-MICRODADOS-CENSO
+│   │   ├── INEP_2021-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2022-MICRODADOS-CENSO
+│   │   ├── INEP_2022-MICRODADOS-CENSO.zip
+│   │   ├── INEP_2023-MICRODADOS-CENSO
+│   │   ├── INEP_2023-MICRODADOS-CENSO.zip
+│   │   └── lista-links.txt
+│   ├── externo
+│   ├── intermediario
+│   │   ├── dados_cursos_tratado_2009.csv
+│   │   ├── dados_cursos_tratado_2010.csv
+│   │   ├── dados_cursos_tratado_2011.csv
+│   │   ├── dados_cursos_tratado_2012.csv
+│   │   ├── dados_cursos_tratado_2013.csv
+│   │   ├── dados_cursos_tratado_2014.csv
+│   │   ├── dados_cursos_tratado_2015.csv
+│   │   ├── dados_cursos_tratado_2016.csv
+│   │   ├── dados_cursos_tratado_2017.csv
+│   │   ├── dados_cursos_tratado_2018.csv
+│   │   ├── dados_cursos_tratado_2019.csv
+│   │   ├── dados_cursos_tratado_2020.csv
+│   │   ├── dados_cursos_tratado_2021.csv
+│   │   ├── dados_cursos_tratado_2022.csv
+│   │   ├── dados_cursos_tratado_2023.csv
+│   │   ├── dados_ies_tratado_2009.csv
+│   │   ├── dados_ies_tratado_2010.csv
+│   │   ├── dados_ies_tratado_2011.csv
+│   │   ├── dados_ies_tratado_2012.csv
+│   │   ├── dados_ies_tratado_2013.csv
+│   │   ├── dados_ies_tratado_2014.csv
+│   │   ├── dados_ies_tratado_2015.csv
+│   │   ├── dados_ies_tratado_2016.csv
+│   │   ├── dados_ies_tratado_2017.csv
+│   │   ├── dados_ies_tratado_2018.csv
+│   │   ├── dados_ies_tratado_2019.csv
+│   │   ├── dados_ies_tratado_2020.csv
+│   │   ├── dados_ies_tratado_2021.csv
+│   │   ├── dados_ies_tratado_2022.csv
+│   │   └── dados_ies_tratado_2023.csv
+│   └── processado
+│       ├── dados_cursos_2009.csv
+│       ├── dados_cursos_2010.csv
+│       ├── dados_cursos_2011.csv
+│       ├── dados_cursos_2012.csv
+│       ├── dados_cursos_2013.csv
+│       ├── dados_cursos_2014.csv
+│       ├── dados_cursos_2015.csv
+│       ├── dados_cursos_2016.csv
+│       ├── dados_cursos_2017.csv
+│       ├── dados_cursos_2018.csv
+│       ├── dados_cursos_2019.csv
+│       ├── dados_cursos_2020.csv
+│       ├── dados_cursos_2021.csv
+│       ├── dados_cursos_2022.csv
+│       ├── dados_cursos_2023.csv
+│       ├── dados_cursos_serie_temporal.csv
+│       ├── dados_cursos_tratado_2009.csv
+│       ├── dados_cursos_tratado_2010.csv
+│       ├── dados_cursos_tratado_2011.csv
+│       ├── dados_cursos_tratado_2012.csv
+│       ├── dados_cursos_tratado_2013.csv
+│       ├── dados_cursos_tratado_2014.csv
+│       ├── dados_cursos_tratado_2015.csv
+│       ├── dados_cursos_tratado_2016.csv
+│       ├── dados_cursos_tratado_2017.csv
+│       ├── dados_cursos_tratado_2018.csv
+│       ├── dados_cursos_tratado_2019.csv
+│       ├── dados_cursos_tratado_2020.csv
+│       ├── dados_cursos_tratado_2021.csv
+│       ├── dados_cursos_tratado_2022.csv
+│       ├── dados_cursos_tratado_2023.csv
+│       ├── dados_ies_2009.csv
+│       ├── dados_ies_2010.csv
+│       ├── dados_ies_2011.csv
+│       ├── dados_ies_2012.csv
+│       ├── dados_ies_2013.csv
+│       ├── dados_ies_2014.csv
+│       ├── dados_ies_2015.csv
+│       ├── dados_ies_2016.csv
+│       ├── dados_ies_2017.csv
+│       ├── dados_ies_2018.csv
+│       ├── dados_ies_2019.csv
+│       ├── dados_ies_2020.csv
+│       ├── dados_ies_2021.csv
+│       ├── dados_ies_2022.csv
+│       ├── dados_ies_2023.csv
+│       ├── dados_ies_tratado_2009.csv
+│       ├── dados_ies_tratado_2010.csv
+│       ├── dados_ies_tratado_2011.csv
+│       ├── dados_ies_tratado_2012.csv
+│       ├── dados_ies_tratado_2013.csv
+│       ├── dados_ies_tratado_2014.csv
+│       ├── dados_ies_tratado_2015.csv
+│       ├── dados_ies_tratado_2016.csv
+│       ├── dados_ies_tratado_2017.csv
+│       ├── dados_ies_tratado_2018.csv
+│       ├── dados_ies_tratado_2019.csv
+│       ├── dados_ies_tratado_2020.csv
+│       ├── dados_ies_tratado_2021.csv
+│       ├── dados_ies_tratado_2022.csv
+│       ├── dados_ies_tratado_2023.csv
+│       ├── dados_ingresso_evasao_conclusao.csv
+│       ├── final_administracao.csv
+│       ├── final_direito.csv
+│       ├── final_eng_civil.csv
+│       ├── final_ingressantes.csv
+│       └── final_medicina.csv
+├── documentos
+│   ├── diagramas
+│   │   ├── disclaimer_folders.png
+│   │   └── fluxo_dados.png
+│   └── graficos
+│       ├── administracao.png
+│       ├── direito.png
+│       ├── engenharia_civil.png
+│       ├── medicina.png
+│       ├── taxa_evasao_administracao.html
+│       ├── taxa_evasao_administracao.png
+│       ├── taxa_evasao_direito.html
+│       ├── taxa_evasao_direito.png
+│       ├── taxa_evasao_eng_civil.html
+│       ├── taxa_evasao_eng_civil.png
+│       ├── taxa_evasao_medicina.html
+│       └── taxa_evasao_medicina.png
 ├── LEIAME.md
-└── LICENCA
+├── LICENCA
+├── log_erros.txt
+├── modelos
+│   ├── modelos_salvos
+│   │   └── modelo_melhor_evasao.pkl
+│   └── resultados_modelos
+│       ├── matriz_confusao.png
+│       ├── metricas_modelos.txt
+│       └── metricas.txt
+├── README.md
+├── relatorios
+│   ├── figuras
+│   │   ├── distribuicao_taxa_evasao.png
+│   │   ├── figura1.png
+│   │   ├── figura2.png
+│   │   ├── grafico_ingressantes_vs_concluintes.png
+│   │   ├── grafico_mapa_calor_correlacoes.png
+│   │   ├── grafico_taxa_conclusao.png
+│   │   ├── grafico_taxa_evasao_modalidade.png
+│   │   └── grafico_taxa_ingresso.png
+│   ├── logs
+│   │   └── log_treinamento.txt
+│   ├── relatorio_analitico_final.pdf
+│   └── tabelas
+│       └── tabela1.csv
+├── requisitos.txt
+└── scripts
+    ├── analises
+    │   ├── analises.py
+    │   └── analises.R
+    ├── coleta_dados
+    │   ├── coleta_dados_oficiais.py
+    │   └── coletar_links_inep.py
+    ├── modelagem
+    │   └── treinamento_modelo.py
+    ├── processamento_dados
+    │   ├── pre_processamento.py
+    │   └── processamento_dados
+    ├── relatorio
+    │   └── gerar_relatorio_pdf.py
+    └── visualizacao
+        └── gerar_graficos.py
+
+
 
 # Análise de Dados Acadêmicos de IES Públicas 
 
@@ -81,7 +220,6 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
   - `processado/`: Dados após limpeza e pré-processamento.
   - `externo/`: Dados provenientes de fontes externas.
   - `intermediario/`: Dados temporários durante o processamento.
-- `notebooks/`: Notebooks Jupyter para exploração e desenvolvimento.
 - `scripts/`: Scripts Python para automação de tarefas.
 - `modelos/`: Modelos treinados e resultados associados.
 - `relatorios/`: Recursos para relatórios e apresentações.
@@ -106,16 +244,13 @@ Crie o ambiente a partir do arquivo `ambiente/ambiente.yml`:
 
 ```bash
 conda env create -f ambiente/ambiente.yml
-conda activate informacao_env
+conda activate TCC_env
 
 
 Utilização da Estrutura de Pastas
 
 	•	Armazenamento de Dados:
 	•	Armazene os dados brutos em dados/bruto/ e utilize-os como base para gerar os dados processados em dados/processado/.
-	•	Notebooks:
-	•	Use os notebooks localizados em notebooks/ para experimentação e desenvolvimento iterativo.
-	•	Após estabilizar o código nos notebooks, converta-o para scripts e organize-os na pasta scripts/.
 	•	Modelos:
 	•	Salve os modelos treinados em modelos/modelos_salvos/ para reutilização.
 	•	Registre os resultados de desempenho dos modelos na pasta modelos/resultados_modelos/.
@@ -148,49 +283,49 @@ Para o Artigo:
 	•	Automatização: Considere criar scripts de automação para tarefas repetitivas, como atualização de dados ou treinamento de modelos.
 	•	Conformidade com a Revista: Verifique sempre as diretrizes da revista Informação & Informação para garantir que o formato dos arquivos (especialmente figuras e tabelas) está conforme as especificações.
 
-# **Análise de Dados Acadêmicos do INEP/MEC – MVP 2023**  
+# **Análise de Dados Acadêmicos do INEP/MEC – MVP 2023, depois de 2011 a 2023**  
 
 Este projeto tem como objetivo desenvolver uma aplicação para análise de dados acadêmicos de Instituições de Ensino Superior (IES) **com base nos microdados do Censo da Educação Superior do INEP/MEC**. A primeira fase do projeto (MVP) foca exclusivamente nos **dados do ano de 2023**, permitindo uma implementação controlada e iterativa antes de expandir para séries históricas.
 
 ## **Alteração de Escopo**  
 **ANTES:** O projeto analisaria dados de **1995 a 2023**.  
 **MVP:** O escopo foi reduzido para **2011 a 2023 **, conforme decisão da equipe para viabilizar um MVP funcional. A expansão para anos anteriores será feita **gradualmente**, após validação dos resultados do MVP.  
-***AGORA:*** O projeto analisará os anos de 2009 a 2023. Não serão usados de 1995 a 2008, pois as variáveis são múltiplas, dados não coincidentes e não há tempo para limpeza, normalização e tratamento. 
+***AGORA:*** O projeto analisará os anos de 2009 a 2023. Não serão usados de 1995 a 2008, pois as variáveis são múltiplas, dados não coincidentes, sendo o PRINCIPAL PROBLEMA É QUE AS VARIÁVEIS ESTÃO EM APENAS UMA ÚNICA COLUNA, SEPARADOS POR "|", "||" E "|||", e não há tempo para limpeza, normalização e tratamento. 
 
 ---
 
 ## **Execução do MVP**
 1. **Coleta de Dados**
-   - **O projeto não usa mais raspagem de dados (web scraping).**
-   - **Os microdados do INEP 2023 são baixados diretamente da fonte oficial e armazenados em `dados/bruto/`**.
+   - **Os microdados do INEP (1995-2023) são coletados diretamente da fonte oficial e armazenados em `dados/bruto/`**.
    - **Arquivos principais:**
      - `MICRODADOS_ED_SUP_IES_2023.CSV`
      - `MICRODADOS_CADASTRO_CURSOS_2023.CSV`
+     (...)
    - Executar os scripts para tratamento dos dados:
      ```bash
-	   python ./informacao/scripts/coleta_dados/coletar_links_inep.py
-     python ./informacao/scripts/coleta_dados/coleta_dados_oficiais.py
+	   python ./scripts/coleta_dados/coletar_links_inep.py
+     python ./scripts/coleta_dados/coleta_dados_oficiais.py
      ```
 
 2. **Pré-processamento e Análise Exploratória**
    - Executar os scripts para tratamento dos dados:
      ```bash
-     python ./informacao/scripts/processamento_dados/pre_processamento.py
-     python ./informacao/scripts/processamento_dados/processamento_dados/tratar_dados.py
+     python ./scripts/processamento_dados/pre_processamento.py
+     python ./scripts/processamento_dados/processamento_dados/tratar_dados.py
      ```
-   - **O tratamento de dados foi ajustado para lidar apenas com 2023**.  
+   - **O tratamento de dados foi ajustado para lidar de 2009 a 2023**.  
    - **Para demais ajustes, renomeie o nome da pasta para que o script consiga encontrar os arquivos conforme a foto 1 ao final do documento**
 
 3. **Cálculos**
-    - Executar o script em R para obter os gráficos e os dados para a modelagem
+    - Executar o script em Python para obter os gráficos e os dados para a modelagem
     ```bash
     # Confira se você tem as bibliotecas devidamente instaladas em seu computador
-    Rscript ./informacao/scripts/analises/analises.R
+    Rscript ./scripts/analises/analises.py
     ```
-    - Caso prefira, poderá executar o mesmo script em Python
+    - Caso prefira, poderá executar o mesmo script em R
     ```bash
     # Confira se você tem as bibliotecas devidamente instaladas em seu computador
-    python ./informacao/scripts/analises/analises.py
+    python ./scripts/analises/analises.py
     ```
 
     - A saída de dados é composta por arquivos com o prefixo `final_` que serevem de input para a modelagem.
@@ -200,7 +335,7 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 	- dados_cursos_tratado.csv
 	- dados_ies_tratado.csv
 
-   - **Agora o modelo é treinado somente com os dados de 2023**:
+   - **Agora o modelo é treinado com os dados de 2009 a 2023**:
      ```bash
      python scripts/modelagem/treinamento_modelo.py
      ```
@@ -213,7 +348,7 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 
 ## **Dados Utilizados no MVP**  
 **ANTES:** O projeto processaria **apenas dados de 2023**.  
-**AGORA:** O projeto foca **de 2011 a 2023**, incluindo os seguintes arquivos:
+**AGORA:** O projeto foca **de 2009 a 2023**, incluindo os seguintes arquivos:
   - `MICRODADOS_ED_SUP_IES_2023.CSV`
   - `MICRODADOS_CADASTRO_CURSOS_2023.CSV`
   - `dados_ies_tratado.csv`
@@ -226,7 +361,6 @@ Esses arquivos foram ajustados para conter apenas informações de **ingresso, e
 
 ## **Scripts Atualizados**
 ### **1. Coleta de Dados**  
-   **ANTES:** Raspagem de dados via `raspagem_web.py`.  (DISPENSADO)
    **AGORA:** Os dados são baixados diretamente das fontes oficiais e processados com:
    ```bash
    python scripts/coleta_dados/coletar_links_inep.py
@@ -239,7 +373,7 @@ _Foto 1: Correção no nome de algumas pastas_
 
 ### **2. Pré-processamento e Tratamento**
    - **ANTES:** Unificação de dados de múltiplos anos.  
-   - **AGORA:** Apenas os dados de **2023** são processados:
+   - **AGORA:** Dados de **2009 a 2023** são processados:
      ```bash
      python scripts/processamento_dados/pre_processamento.py
      python scripts/processamento_dados/tratar_dados.py
@@ -247,7 +381,7 @@ _Foto 1: Correção no nome de algumas pastas_
 
 ### **3. Modelagem e Avaliação**
    - **ANTES:** Modelos baseados em séries históricas.  
-   - **AGORA:** Modelo treinado **exclusivamente com dados de 2023**.  
+   - **AGORA:** Modelo treinado **exclusivamente com dados de 2009 a 2023**.  
    ```bash
    python scripts/modelagem/treinamento_modelo.py
    python scripts/visualizacao/gerar_graficos.py
@@ -257,20 +391,20 @@ _Foto 1: Correção no nome de algumas pastas_
 
 ## **Próximos Passos**
 1. **Validar resultados do MVP**: Garantir que o pipeline está funcional e coerente.  
-2. **Aprimorar visualizações e métricas**: Refinar análises e gráficos no `visualizacao_resultados.ipynb`.  
-3. **Expansão gradual**: Após validar os dados de 2023, expandir para séries históricas (anos anteriores).  
+2. **Aprimorar visualizações e métricas**: Refinar análises e gráficos no `visualizacao/gerar_graficos.py`.  
+3. **Expansão gradual**: Após validar os dados de 2023, depois expandir para séries históricas (anos anteriores).  
 
 ---
 
 ## **Benefícios da Mudança de Escopo**
-✅ **Maior viabilidade:** Processo mais enxuto e testável.  
-✅ **Melhor organização:** Dados de um único ano garantem mais controle e menos ruído.  
-✅ **Facilidade de expansão:** Depois de validado, será mais simples incluir novos anos.  
+**Maior viabilidade:** Processo mais enxuto e testável.  
+**Melhor organização:** Dados de um único ano garantem mais controle e menos ruído.  
+**Facilidade de expansão:** Depois de validado, será mais simples incluir novos anos.  
 
 ---
 
 ### **Conclusão**
-O projeto agora se concentra na análise **dos microdados do Censo da Educação Superior 2023**, permitindo um MVP funcional. Após rodar satisfatoriamente, podemos escalar para incluir múltiplos anos gradualmente.  
+O projeto fez MVP com dados e análise de 2023, depois expandido de 2011 - 2023, permitindo um MVP funcional.  Agora se concentra na análise **dos microdados do Censo da Educação Superior de 2009 a 2023**, realizado satisfatoriamente, mas necessário refinar os modelos de treinamentos, para melhorar a visualização dos resultados.  
 
 ---
 
@@ -288,13 +422,7 @@ ___________________________________________________________________________
 # python scripts/processamento_dados/pre_processamento.py
 # python scripts/tratar_dados/pre_processamento.py
 # 	2.1	Análise Exploratória (EDA – Exploratory Data Analysis)
-# 	•	No notebook exploracao_dados.ipynb, rodamos algumas análises estatísticas básicas, histogramas (para taxa de evasão, por exemplo), e correlações.
-# 	•	Verificável possíveis outliers e valores ausentes, ajustando conforme preciso.
-# 	2.2 Modelagem Inicial
-# 	•	No notebook ajuste_hiperparametros.ipynb, teste hiperparâmetros de um modelo (Random Forest).
-# 	•	No notebook treinamento_modelo.ipynb, treinamos a versão final do Random Forest e salvamos o modelo (via joblib).
-# 	2.3 Análise dos Resultados
-# 	•	No notebook visualizacao_resultados
+# python scripts/analises/analises.py
 
 # 3.	Treinamento do Modelo
 # Treine o modelo de aprendizado de máquina:
@@ -323,7 +451,7 @@ ___________________________________________________________________________
 
 # 6.1. coleta_dados_oficiais.py
 
-# Caminho: informacao/scripts/coleta_dados_oficiais.py
+# Caminho: /scripts/coleta_dados_oficiais.py
 
 # Descrição: Para coletar dados sobre taxas de ingresso, evasão e conclusão de universitários, é mais eficiente utilizar fontes de dados abertos fornecidas por instituições oficiais, como o Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) e o Ministério da Educação (MEC). Essas instituições disponibilizam microdados detalhados que podem ser acessados diretamente, eliminando a necessidade de web scraping.
 # Script para coletar dados das IES utilizando web scraping.
@@ -331,75 +459,47 @@ ___________________________________________________________________________
 
 # 6.2. pre_processamento.py
 
-# Caminho: informacao/scripts/processamento_dados/pre_processamento.py
+# Caminho: /scripts/processamento_dados/pre_processamento.py
 
 # Descrição: Script para limpar e preparar os dados para modelagem.
 
 # 6.3. treinamento_modelo.py
 
-# Caminho: informacao/scripts/modelagem/treinamento_modelo.py
+# Caminho: /scripts/modelagem/treinamento_modelo.py
 
 # Descrição: Script para treinar o modelo de aprendizado de máquina.
 
 # 6.4. gerar_graficos.py
 
-# Caminho: informacao/scripts/visualizacao/gerar_graficos.py
+# Caminho: /scripts/visualizacao/gerar_graficos.py
 
 # Descrição: Script para gerar gráficos e visualizações dos resultados.
 
-# Notebooks
+# 6.5. analises/analises.py
 
-# 6.5. exploracao_dados.ipynb
+# Caminho: scripts/analises/analises.py
 
-# Caminho: informacao/notebooks/exploracao_dados/exploracao_dados.ipynb
-
-# Descrição: Notebook para análise exploratória dos dados (EDA).
-
-# 6.6. limpeza_dados.ipynb
-
-# Caminho: informacao/notebooks/pre_processamento/limpeza_dados.ipynb
-
-# Descrição: Notebook para limpeza e pré-processamento dos dados.
-
-# 6.7. treinamento_modelo.ipynb
-
-# Caminho: informacao/notebooks/modelagem/treinamento_modelo.ipynb
-
-# Descrição: Notebook para treinamento do modelo de aprendizado de máquina.
-
-# 6.8. ajuste_hiperparametros.ipynb
-
-# Caminho: informacao/notebooks/modelagem/ajuste_hiperparametros.ipynb
-
-# Descrição: Notebook para ajuste de hiperparâmetros do modelo.
-
-# 6.9. visualizacao_resultados.ipynb
-
-# Caminho: informacao/notebooks/analise_resultados/visualizacao_resultados.ipynb
-
-# Descrição: Notebook para análise e visualização dos resultados obtidos.
+# Descrição: Script Python para análise exploratória dos dados (EDA).
 
 
 # 7. Modelos
 
 # 7.1. modelo_random_forest.pkl
 
-# Caminho: informacao/modelos/modelos_salvos/modelo_random_forest.pkl
+# Caminho: /modelos/modelos_salvos/modelo_random_forest.pkl
 
 # Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo.py ou pelo notebook correspondente.
 
 
-# 8. Relatórios
+## Publicações e Submissões
 
-# 8.1. metricas.txt
-
-# Caminho: informacao/modelos/resultados_modelos/metricas.txt
-
-# Descrição: Arquivo de texto com as métricas de desempenho do modelo.
+- Artigo em preparação: "Análise de Dados Educacionais em Instituições de Ensino Superior com Técnicas de Aprendizado de Máquina"
+- Revista-alvo: Informação & Informação (Qualis A1)
+- Manuscrito disponível em: `artigo/manuscrito/artigo.docx`
 
 # 8.2. log_treinamento.txt
 
-# Caminho: informacao/relatorios/logs/log_treinamento.txt
+# Caminho: /relatorios/logs/log_treinamento.txt
 
 # Descrição: Arquivo de log do processo de treinamento do modelo.
 
@@ -407,7 +507,7 @@ ___________________________________________________________________________
 
 # 9.1. fluxo_dados.png
 
-# Caminho: informacao/documentos/diagramas/fluxo_dados.png
+# Caminho: /documentos/diagramas/fluxo_dados.png
 
 # Descrição: Diagrama do fluxo de dados do projeto, desde a coleta até a visualização.
 
