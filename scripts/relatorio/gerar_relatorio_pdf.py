@@ -1,7 +1,11 @@
+# gerar_relatorio_pdf.py
+# Gera relatório analítico final em PDF e DOCX com base nos dados processados e gráficos gerados pelo projeto.
+
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
+from docx import Document
 
 def gerar_relatorio():
     df = pd.read_csv('dados/processado/dados_ingresso_evasao_conclusao.csv', sep=';')
@@ -151,6 +155,51 @@ def gerar_relatorio():
         plt.close()
         
         print("[OK] PDF gerado com sucesso.")
+
+    # Geração do DOCX
+    doc = Document()
+    doc.add_heading('Relatório Analítico Final', 0)
+
+    doc.add_heading('1. INTRODUÇÃO', level=1)
+    doc.add_paragraph(
+        "Este projeto tem como foco a análise de dados da educação superior brasileira, "
+        "com ênfase na evasão e conclusão de cursos em instituições públicas e privadas."
+    )
+
+    doc.add_heading('2. OBJETIVOS', level=1)
+    doc.add_heading('2.1 Objetivos gerais', level=2)
+    doc.add_paragraph("- Estimar taxas de ingresso, evasão e conclusão de cursos superiores no Brasil.\n"
+                      "- Criar visualizações analíticas e um modelo preditivo para auxiliar diagnósticos.")
+
+    doc.add_heading('2.2 Objetivos específicos', level=2)
+    doc.add_heading('2.2.1 Cronograma do Projeto', level=3)
+    for item in cronograma_texto[1:]:
+        doc.add_paragraph(item, style='List Bullet')
+
+    doc.add_heading('3. JUSTIFICATIVA', level=1)
+    doc.add_paragraph(
+        "A evasão acadêmica impacta diretamente o desenvolvimento educacional e a alocação de recursos públicos. "
+        "Compreender padrões e prever tendências é fundamental para a tomada de decisões mais eficazes por parte de gestores e formuladores de políticas públicas."
+    )
+
+    doc.add_heading('4. REVISÃO BIBLIOGRÁFICA (SÍNTESE)', level=1)
+    doc.add_paragraph("Conteúdo a ser incluído manualmente conforme revisão dos autores.")
+
+    doc.add_heading('5. METODOLOGIA', level=1)
+    for linha in metodologia:
+        if linha.strip().endswith(":"):
+            doc.add_heading(linha.strip(), level=2)
+        elif linha.strip().startswith("-"):
+            doc.add_paragraph(linha.strip(), style='List Bullet')
+        elif linha.strip():
+            doc.add_paragraph(linha.strip())
+
+    doc.add_heading('6. RESULTADOS E DISCUSSÕES', level=1)
+    for item in conclusoes[1:]:
+        doc.add_paragraph(item, style='List Bullet')
+
+    doc.save('relatorios/relatorio_analitico_final.docx')
+    print("[OK] DOCX gerado com sucesso.")
 
 if __name__ == '__main__':
     gerar_relatorio()
