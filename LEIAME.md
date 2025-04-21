@@ -1,76 +1,3 @@
-<<<<<<< HEAD
-Informacao-UEL/
-├── dados/
-│   ├── bruto/
-│   │   ├── INEP_1995-2022-MICRODADOS-CENSO /
-│   │   │    └── DADOS
-│   │   │    └── Leia-me
-│   │   └── INEP_1995-2022-MICRODADOS-ZIP
-│   │   
-│   ├── processado/
-│   │   ├── ies_dados_limpos.csv
-│   │   └── caracteristicas_selecionadas.csv
-│   ├── externo/
-│   │   └── inep_dados_2020.csv
-│   └── intermediario/
-│       └── dados_temp.pkl
-├── notebooks/
-│   ├── exploracao_dados/
-│   │   └── exploracao_dados.ipynb
-│   ├── pre_processamento/
-│   │   └── limpeza_dados.ipynb
-│   ├── modelagem/
-│   │   ├── treinamento_modelo.ipynb
-│   │   └── ajuste_hiperparametros.ipynb
-│   └── analise_resultados/
-│       └── visualizacao_resultados.ipynb
-├── scripts/
-│   ├── coleta_dados/
-│   │   └── coleta_dados_oficiais.py
-│   ├── processamento_dados/
-│   │   └── pre_processamento.py
-│   ├── modelagem/
-│   │   └── treinamento_modelo.py
-│   └── visualizacao/
-│       └── gerar_graficos.py
-├── modelos/
-│   ├── modelos_salvos/
-│   │   └── modelo_random_forest.pkl
-│   └── resultados_modelos/
-│       ├── metricas.txt
-│       └── matriz_confusao.png
-├── relatorios/
-│   ├── figuras/
-│   │   ├── figura1.png
-│   │   └── figura2.png
-│   ├── tabelas/
-│   │   └── tabela1.csv
-│   └── logs/
-│       └── log_treinamento.txt
-├── artigo/
-│   ├── manuscrito/
-│   │   ├── artigo.docx
-│   │   ├── secoes/
-│   │   │   ├── introducao.docx
-│   │   │   ├── metodologia.docx
-│   │   │   └── resultados.docx
-│   │   ├── referencias/
-│   │   │   └── referencias.bib
-│   │   └── figuras/
-│   │       ├── figura1.tif
-│   │       └── figura2.tif
-│   └── submissao/
-│       ├── artigo_final.docx
-│       └── checklist_submissao.pdf
-├── documentos/
-│   └── diagramas/
-│       └── fluxo_dados.png
-├── ambiente/
-│   ├── requisitos.txt
-│   └── ambiente.yml
-├── LEIAME.md
-└── LICENCA
-=======
 tree -L 3
 .
 ├── allfiles.txt
@@ -311,7 +238,6 @@ tree -L 3
 │       └── gerar_graficos.py
 └── scripts_modificados_0805.txt
 
->>>>>>> testing_and_validation
 
 # Análise de Dados Acadêmicos de IES Públicas 
 
@@ -324,10 +250,6 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
   - `processado/`: Dados após limpeza e pré-processamento.
   - `externo/`: Dados provenientes de fontes externas.
   - `intermediario/`: Dados temporários durante o processamento.
-<<<<<<< HEAD
-- `notebooks/`: Notebooks Jupyter para exploração e desenvolvimento.
-=======
->>>>>>> testing_and_validation
 - `scripts/`: Scripts Python para automação de tarefas.
 - `modelos/`: Modelos treinados e resultados associados.
 - `relatorios/`: Recursos para relatórios e apresentações.
@@ -343,11 +265,8 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 
 - Python 3.8 ou superior
 - Anaconda ou Miniconda para gerenciamento de ambiente (recomendado)
-<<<<<<< HEAD
-=======
 - streamlit (para execução do dashboard interativo)
 - scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
->>>>>>> testing_and_validation
 
 ### Configuração do Ambiente
 
@@ -357,9 +276,6 @@ Crie o ambiente a partir do arquivo `ambiente/ambiente.yml`:
 
 ```bash
 conda env create -f ambiente/ambiente.yml
-<<<<<<< HEAD
-conda activate informacao_env
-=======
 conda activate TCC_env
 ```
 
@@ -392,19 +308,12 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r ambiente/requisitos.txt
 ```
->>>>>>> testing_and_validation
 
 
 Utilização da Estrutura de Pastas
 
 	•	Armazenamento de Dados:
 	•	Armazene os dados brutos em dados/bruto/ e utilize-os como base para gerar os dados processados em dados/processado/.
-<<<<<<< HEAD
-	•	Notebooks:
-	•	Use os notebooks localizados em notebooks/ para experimentação e desenvolvimento iterativo.
-	•	Após estabilizar o código nos notebooks, converta-o para scripts e organize-os na pasta scripts/.
-=======
->>>>>>> testing_and_validation
 	•	Modelos:
 	•	Salve os modelos treinados em modelos/modelos_salvos/ para reutilização.
 	•	Registre os resultados de desempenho dos modelos na pasta modelos/resultados_modelos/.
@@ -437,38 +346,19 @@ Para o Artigo:
 	•	Automatização: Considere criar scripts de automação para tarefas repetitivas, como atualização de dados ou treinamento de modelos.
 	•	Conformidade com a Revista: Verifique sempre as diretrizes da revista Informação & Informação para garantir que o formato dos arquivos (especialmente figuras e tabelas) está conforme as especificações.
 
-<<<<<<< HEAD
-# **Análise de Dados Acadêmicos do INEP/MEC – MVP 2023**  
-=======
 # **Análise de Dados Acadêmicos do INEP/MEC – MVP 2023, depois de 2011 a 2023**  
->>>>>>> testing_and_validation
 
 Este projeto tem como objetivo desenvolver uma aplicação para análise de dados acadêmicos de Instituições de Ensino Superior (IES) **com base nos microdados do Censo da Educação Superior do INEP/MEC**. A primeira fase do projeto (MVP) foca exclusivamente nos **dados do ano de 2023**, permitindo uma implementação controlada e iterativa antes de expandir para séries históricas.
 
 ## **Alteração de Escopo**  
 **ANTES:** O projeto analisaria dados de **1995 a 2023**.  
 **MVP:** O escopo foi reduzido para **2011 a 2023 **, conforme decisão da equipe para viabilizar um MVP funcional. A expansão para anos anteriores será feita **gradualmente**, após validação dos resultados do MVP.  
-<<<<<<< HEAD
-***AGORA:*** O projeto analisará os anos de 2009 a 2023. Não serão usados de 1995 a 2008, pois as variáveis são múltiplas, dados não coincidentes e não há tempo para limpeza, normalização e tratamento. 
-=======
 ***AGORA:*** O projeto analisará os anos de 2009 a 2023. Não serão usados de 1995 a 2008, pois as variáveis são múltiplas, dados não coincidentes, sendo o PRINCIPAL PROBLEMA É QUE AS VARIÁVEIS ESTÃO EM APENAS UMA ÚNICA COLUNA, SEPARADOS POR "|", "||" E "|||", e não há tempo para limpeza, normalização e tratamento. 
->>>>>>> testing_and_validation
 
 ---
 
 ## **Execução do MVP**
 1. **Coleta de Dados**
-<<<<<<< HEAD
-   - **O projeto não usa mais raspagem de dados (web scraping).**
-   - **Os microdados do INEP 2023 são baixados diretamente da fonte oficial e armazenados em `dados/bruto/`**.
-   - **Arquivos principais:**
-     - `MICRODADOS_ED_SUP_IES_2023.CSV`
-     - `MICRODADOS_CADASTRO_CURSOS_2023.CSV`
-   - Executar os scripts para tratamento dos dados:
-     ```bash
-	   python ./informacao/scripts/coleta_dados/coletar_links_inep.py
-     python ./informacao/scripts/coleta_dados/coleta_dados_oficiais.py
-=======
    - **Os microdados do INEP (1995-2023) são coletados diretamente da fonte oficial e armazenados em `dados/bruto/`**.
    - **Arquivos principais:**
      - `MICRODADOS_ED_SUP_IES_2023.CSV`
@@ -478,30 +368,11 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
      ```bash
 	   python ./scripts/coleta_dados/coletar_links_inep.py
      python ./scripts/coleta_dados/coleta_dados_oficiais.py
->>>>>>> testing_and_validation
      ```
 
 2. **Pré-processamento e Análise Exploratória**
    - Executar os scripts para tratamento dos dados:
      ```bash
-<<<<<<< HEAD
-     python ./informacao/scripts/processamento_dados/pre_processamento.py
-     python ./informacao/scripts/processamento_dados/processamento_dados/tratar_dados.py
-     ```
-   - **O tratamento de dados foi ajustado para lidar apenas com 2023**.  
-   - **Para demais ajustes, renomeie o nome da pasta para que o script consiga encontrar os arquivos conforme a foto 1 ao final do documento**
-
-3. **Cálculos**
-    - Executar o script em R para obter os gráficos e os dados para a modelagem
-    ```bash
-    # Confira se você tem as bibliotecas devidamente instaladas em seu computador
-    Rscript ./informacao/scripts/analises/analises.R
-    ```
-    - Caso prefira, poderá executar o mesmo script em Python
-    ```bash
-    # Confira se você tem as bibliotecas devidamente instaladas em seu computador
-    python ./informacao/scripts/analises/analises.py
-=======
      python ./scripts/processamento_dados/pre_processamento.py
      python ./scripts/processamento_dados/processamento_dados/tratar_dados.py
      ```
@@ -518,7 +389,6 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
     ```bash
     # Confira se você tem as bibliotecas devidamente instaladas em seu computador
     python ./scripts/analises/analises.py
->>>>>>> testing_and_validation
     ```
 
     - A saída de dados é composta por arquivos com o prefixo `final_` que serevem de input para a modelagem.
@@ -528,22 +398,14 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 	- dados_cursos_tratado.csv
 	- dados_ies_tratado.csv
 
-<<<<<<< HEAD
-   - **Agora o modelo é treinado somente com os dados de 2023**:
-     ```bash
-     python scripts/modelagem/treinamento_modelo.py
-=======
    - **Agora o modelo é treinado com os dados de 2009 a 2023**:
      ```bash
      python scripts/modelagem/treinamento_modelo_original.py
->>>>>>> testing_and_validation
      ```
    - A avaliação é feita com:
      ```bash
      python scripts/visualizacao/gerar_graficos.py
      ```
-<<<<<<< HEAD
-=======
      ```bash
      # Executar validação complementar com transferência de aprendizado
      python scripts/analises/comparar_modelos.py
@@ -565,17 +427,12 @@ python scripts/visualizacao/comparar_predicoes_cursos.py
 ```
 
 Essa etapa validou a estabilidade dos modelos com diferentes abordagens, identificando baixa capacidade preditiva com as variáveis atuais e sugerindo aprimoramento futuro via engenharia de features. Os resultados também foram visualizados por curso, com boa aderência em alguns casos.
->>>>>>> testing_and_validation
 
 ---
 
 ## **Dados Utilizados no MVP**  
 **ANTES:** O projeto processaria **apenas dados de 2023**.  
-<<<<<<< HEAD
-**AGORA:** O projeto foca **de 2011 a 2023**, incluindo os seguintes arquivos:
-=======
 **AGORA:** O projeto foca **de 2009 a 2023**, incluindo os seguintes arquivos:
->>>>>>> testing_and_validation
   - `MICRODADOS_ED_SUP_IES_2023.CSV`
   - `MICRODADOS_CADASTRO_CURSOS_2023.CSV`
   - `dados_ies_tratado.csv`
@@ -588,10 +445,6 @@ Esses arquivos foram ajustados para conter apenas informações de **ingresso, e
 
 ## **Scripts Atualizados**
 ### **1. Coleta de Dados**  
-<<<<<<< HEAD
-   **ANTES:** Raspagem de dados via `raspagem_web.py`.  (DISPENSADO)
-=======
->>>>>>> testing_and_validation
    **AGORA:** Os dados são baixados diretamente das fontes oficiais e processados com:
    ```bash
    python scripts/coleta_dados/coletar_links_inep.py
@@ -604,11 +457,7 @@ _Foto 1: Correção no nome de algumas pastas_
 
 ### **2. Pré-processamento e Tratamento**
    - **ANTES:** Unificação de dados de múltiplos anos.  
-<<<<<<< HEAD
-   - **AGORA:** Apenas os dados de **2023** são processados:
-=======
    - **AGORA:** Dados de **2009 a 2023** são processados:
->>>>>>> testing_and_validation
      ```bash
      python scripts/processamento_dados/pre_processamento.py
      python scripts/processamento_dados/tratar_dados.py
@@ -616,14 +465,6 @@ _Foto 1: Correção no nome de algumas pastas_
 
 ### **3. Modelagem e Avaliação**
    - **ANTES:** Modelos baseados em séries históricas.  
-<<<<<<< HEAD
-   - **AGORA:** Modelo treinado **exclusivamente com dados de 2023**.  
-   ```bash
-   python scripts/modelagem/treinamento_modelo.py
-   python scripts/visualizacao/gerar_graficos.py
-   ```
-
-=======
    - **AGORA:** Modelo treinado **exclusivamente com dados de 2009 a 2023**.  
    ```bash
    python scripts/modelagem/treinamento_modelo_original.py
@@ -633,40 +474,24 @@ _Foto 1: Correção no nome de algumas pastas_
 python scripts/analises/prever_com_modelos.py
 python scripts/analises/resumir_modelo_h5.py
 
->>>>>>> testing_and_validation
 ---
 
 ## **Próximos Passos**
 1. **Validar resultados do MVP**: Garantir que o pipeline está funcional e coerente.  
-<<<<<<< HEAD
-2. **Aprimorar visualizações e métricas**: Refinar análises e gráficos no `visualizacao_resultados.ipynb`.  
-3. **Expansão gradual**: Após validar os dados de 2023, expandir para séries históricas (anos anteriores).  
-=======
 2. **Aprimorar visualizações e métricas**: Refinar análises e gráficos no `visualizacao/gerar_graficos.py`.  
 3. **Expansão gradual**: Após validar os dados de 2023, depois expandir para séries históricas (anos anteriores).  
->>>>>>> testing_and_validation
 
 ---
 
 ## **Benefícios da Mudança de Escopo**
-<<<<<<< HEAD
-✅ **Maior viabilidade:** Processo mais enxuto e testável.  
-✅ **Melhor organização:** Dados de um único ano garantem mais controle e menos ruído.  
-✅ **Facilidade de expansão:** Depois de validado, será mais simples incluir novos anos.  
-=======
 **Maior viabilidade:** Processo mais enxuto e testável.  
 **Melhor organização:** Dados de um único ano garantem mais controle e menos ruído.  
 **Facilidade de expansão:** Depois de validado, será mais simples incluir novos anos.  
->>>>>>> testing_and_validation
 
 ---
 
 ### **Conclusão**
-<<<<<<< HEAD
-O projeto agora se concentra na análise **dos microdados do Censo da Educação Superior 2023**, permitindo um MVP funcional. Após rodar satisfatoriamente, podemos escalar para incluir múltiplos anos gradualmente.  
-=======
 O projeto fez MVP com dados e análise de 2023, depois expandido de 2011 - 2023, permitindo um MVP funcional.  Agora se concentra na análise **dos microdados do Censo da Educação Superior de 2009 a 2023**, realizado satisfatoriamente, mas necessário refinar os modelos de treinamentos, para melhorar a visualização dos resultados.  
->>>>>>> testing_and_validation
 
 ---
 
@@ -684,25 +509,11 @@ ___________________________________________________________________________
 # python scripts/processamento_dados/pre_processamento.py
 # python scripts/tratar_dados/pre_processamento.py
 # 	2.1	Análise Exploratória (EDA – Exploratory Data Analysis)
-<<<<<<< HEAD
-# 	•	No notebook exploracao_dados.ipynb, rodamos algumas análises estatísticas básicas, histogramas (para taxa de evasão, por exemplo), e correlações.
-# 	•	Verificável possíveis outliers e valores ausentes, ajustando conforme preciso.
-# 	2.2 Modelagem Inicial
-# 	•	No notebook ajuste_hiperparametros.ipynb, teste hiperparâmetros de um modelo (Random Forest).
-# 	•	No notebook treinamento_modelo.ipynb, treinamos a versão final do Random Forest e salvamos o modelo (via joblib).
-# 	2.3 Análise dos Resultados
-# 	•	No notebook visualizacao_resultados
-
-# 3.	Treinamento do Modelo
-# Treine o modelo de aprendizado de máquina:
-# python scripts/modelagem/treinamento_modelo.py
-=======
 # python scripts/analises/analises.py
 
 # 3.	Treinamento do Modelo
 # Treine o modelo de aprendizado de máquina:
 # python scripts/modelagem/treinamento_modelo_original.py
->>>>>>> testing_and_validation
 
 # 4.	Geração de Gráficos
 # Gere visualizações dos resultados:
@@ -727,11 +538,7 @@ ___________________________________________________________________________
 
 # 6.1. coleta_dados_oficiais.py
 
-<<<<<<< HEAD
-# Caminho: informacao/scripts/coleta_dados_oficiais.py
-=======
 # Caminho: /scripts/coleta_dados_oficiais.py
->>>>>>> testing_and_validation
 
 # Descrição: Para coletar dados sobre taxas de ingresso, evasão e conclusão de universitários, é mais eficiente utilizar fontes de dados abertos fornecidas por instituições oficiais, como o Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) e o Ministério da Educação (MEC). Essas instituições disponibilizam microdados detalhados que podem ser acessados diretamente, eliminando a necessidade de web scraping.
 # Script para coletar dados das IES utilizando web scraping.
@@ -739,15 +546,6 @@ ___________________________________________________________________________
 
 # 6.2. pre_processamento.py
 
-<<<<<<< HEAD
-# Caminho: informacao/scripts/processamento_dados/pre_processamento.py
-
-# Descrição: Script para limpar e preparar os dados para modelagem.
-
-# 6.3. treinamento_modelo.py
-
-# Caminho: informacao/scripts/modelagem/treinamento_modelo.py
-=======
 # Caminho: /scripts/processamento_dados/pre_processamento.py
 
 # Descrição: Script para limpar e preparar os dados para modelagem.
@@ -755,49 +553,11 @@ ___________________________________________________________________________
 # 6.3. treinamento_modelo_original.py
 
 # Caminho: /scripts/modelagem/treinamento_modelo_original.py
->>>>>>> testing_and_validation
 
 # Descrição: Script para treinar o modelo de aprendizado de máquina.
 
 # 6.4. gerar_graficos.py
 
-<<<<<<< HEAD
-# Caminho: informacao/scripts/visualizacao/gerar_graficos.py
-
-# Descrição: Script para gerar gráficos e visualizações dos resultados.
-
-# Notebooks
-
-# 6.5. exploracao_dados.ipynb
-
-# Caminho: informacao/notebooks/exploracao_dados/exploracao_dados.ipynb
-
-# Descrição: Notebook para análise exploratória dos dados (EDA).
-
-# 6.6. limpeza_dados.ipynb
-
-# Caminho: informacao/notebooks/pre_processamento/limpeza_dados.ipynb
-
-# Descrição: Notebook para limpeza e pré-processamento dos dados.
-
-# 6.7. treinamento_modelo.ipynb
-
-# Caminho: informacao/notebooks/modelagem/treinamento_modelo.ipynb
-
-# Descrição: Notebook para treinamento do modelo de aprendizado de máquina.
-
-# 6.8. ajuste_hiperparametros.ipynb
-
-# Caminho: informacao/notebooks/modelagem/ajuste_hiperparametros.ipynb
-
-# Descrição: Notebook para ajuste de hiperparâmetros do modelo.
-
-# 6.9. visualizacao_resultados.ipynb
-
-# Caminho: informacao/notebooks/analise_resultados/visualizacao_resultados.ipynb
-
-# Descrição: Notebook para análise e visualização dos resultados obtidos.
-=======
 # Caminho: /scripts/visualizacao/gerar_graficos.py
 
 # Descrição: Script para gerar gráficos e visualizações dos resultados.
@@ -832,31 +592,12 @@ Após todo o processamento e validação, você pode iniciar o painel interativo
 streamlit run scripts/dashboard/app_evasao.py
 ```
 Este dashboard permite explorar os dados processados e as predições de forma interativa.
->>>>>>> testing_and_validation
 
 
 # 7. Modelos
 
 # 7.1. modelo_random_forest.pkl
 
-<<<<<<< HEAD
-# Caminho: informacao/modelos/modelos_salvos/modelo_random_forest.pkl
-
-# Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo.py ou pelo notebook correspondente.
-
-
-# 8. Relatórios
-
-# 8.1. metricas.txt
-
-# Caminho: informacao/modelos/resultados_modelos/metricas.txt
-
-# Descrição: Arquivo de texto com as métricas de desempenho do modelo.
-
-# 8.2. log_treinamento.txt
-
-# Caminho: informacao/relatorios/logs/log_treinamento.txt
-=======
 # Caminho: /modelos/modelos_salvos/modelo_random_forest.pkl
 
 # Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo_original.py.
@@ -871,7 +612,6 @@ Este dashboard permite explorar os dados processados e as predições de forma i
 # 8.2. log_treinamento.txt
 
 # Caminho: /relatorios/logs/log_treinamento.txt
->>>>>>> testing_and_validation
 
 # Descrição: Arquivo de log do processo de treinamento do modelo.
 
@@ -879,11 +619,7 @@ Este dashboard permite explorar os dados processados e as predições de forma i
 
 # 9.1. fluxo_dados.png
 
-<<<<<<< HEAD
-# Caminho: informacao/documentos/diagramas/fluxo_dados.png
-=======
 # Caminho: /documentos/diagramas/fluxo_dados.png
->>>>>>> testing_and_validation
 
 # Descrição: Diagrama do fluxo de dados do projeto, desde a coleta até a visualização.
 
@@ -896,9 +632,6 @@ Este dashboard permite explorar os dados processados e as predições de forma i
 
 # Observações Finais
 
-<<<<<<< HEAD
-# 	•	Integração da Aplicação: Os scripts e notebooks fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
-=======
 ## Publicação Científica
 
 - Artigo em preparação para a Revista **Informação & Informação** (Qualis A1)
@@ -940,7 +673,6 @@ Se utilizar este projeto ou partes dele em artigos ou outros trabalhos acadêmic
 > Este projeto foi desenvolvido no contexto do curso de Bacharelado em Ciência de Dados da UNIVESP, como parte do **Trabalho de Conclusão de Curso** (TCC).
 
 # 	•	Integração da Aplicação: Os scripts fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
->>>>>>> testing_and_validation
 # 	•	Dados Sensíveis: Ao trabalhar com dados reais, assegure-se de estar em conformidade com as leis de proteção de dados, como a LGPD.
 # 	•	Atualizações Necessárias: Alguns códigos utilizam URLs de exemplo ou estruturas genéricas. Você precisará ajustá-los de acordo com as fontes de dados reais e a estrutura dos sites ou APIs que irá utilizar.
 # 	•	Dependências Adicionais: Se utilizar bibliotecas ou ferramentas adicionais, lembre-se de adicioná-las aos arquivos de requisitos (requisitos.txt ou ambiente.yml).
@@ -1028,10 +760,6 @@ Se utilizar este projeto ou partes dele em artigos ou outros trabalhos acadêmic
 # 	•	Visualização:
 # 	•	Scripts para gerar gráficos diretamente a partir dos dados processados.
 
-<<<<<<< HEAD
-# Esta abordagem maximiza a utilização dos microdados, atendendo ao foco do projeto em ingresso, evasão e conclusão dos cursos.
-=======
 # Esta abordagem maximiza a utilização dos microdados, atendendo ao foco do projeto em ingresso, evasão e conclusão dos cursos.
 
 ⚠️ Nota: O arquivo `pyhton.py` foi utilizado apenas para testes temporários e pode ser removido nas versões finais.
->>>>>>> testing_and_validation
