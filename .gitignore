@@ -1,0 +1,100 @@
+# ============================
+# Dados e arquivos sensíveis
+# ============================
+# Evite versionar dados brutos, intermediários, processados, e arquivos externos
+dados/
+dados/bruto/
+dados/intermediario/
+dados/processado/
+dados/externo/
+dados/bruto/INEP_*/
+
+# ============================
+# Modelos e resultados gerados (não versionar modelos treinados, que podem ser grandes ou sensíveis)
+# ============================
+modelos/modelos_salvos/
+modelos/resultados_modelos/
+
+# ============================
+# Logs e arquivos temporários
+# ============================
+# Ignorar logs, arquivos temporários e arquivos compactados
+*.log
+# Atenção: a regra " * log_erros.txt" possui um espaço indesejado; use "log_erros.txt" se necessário
+log_erros.txt
+*.pkl
+*.tmp
+*.zip
+*.tar.gz
+
+# Cuidado ao ignorar todas as extensões .txt e .csv!
+# Se você precisa versionar documentos ou CSVs importantes, remova ou crie exceções.
+*.txt
+*.csv
+
+# ============================
+# Arquivos de configuração e ambiente
+# ============================
+# Ignorar pastas de ambiente virtual e arquivos de configuração de ambiente
+.venv/
+.env/
+env/
+informacao/ambiente/ambiente.yml
+informacao/ambiente/requisitos.txt
+
+# ============================
+# Notebooks e checkpoints
+# ============================
+# Ignorar checkpoints dos Jupyter Notebooks
+.ipynb_checkpoints/
+
+# ============================
+# Arquivos do sistema operacional
+# ============================
+.DS_Store
+.Trash/
+Thumbs.db
+
+# ============================
+# Diretórios de configuração e cache de softwares e sistemas
+# ============================
+Library/
+Pictures/
+.config/
+.gradle/
+.jenkins/
+.download/
+download/
+
+# ============================
+# Arquivos temporários e de backup
+# ============================
+*~
+*.swp
+*.swo
+
+# ============================
+# Caches e arquivos compilados do Python
+# ============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ============================
+# Configurações de IDEs/editores
+# ============================
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.Rproj.user
+*.Rproj
+
+# ============================
+# Arquivos PDF de documentação que não precisam ser versionados
+# ============================
+Leia_me_*.pdf
+
+# ============================
+# Outros arquivos que podem conter dados sensíveis ou que não são relevantes para o versionamento
+# ============================
+# Caso haja arquivos de configuração de ferramentas de build ou cache de IDEs específicos, adicione-os aqui.
