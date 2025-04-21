@@ -15,7 +15,8 @@ script_paths = [
     "scripts/processamento_dados/processamento_dados/tratar_dados.py",
     "scripts/analises/analises.py",
     "scripts/modelagem/treinamento_modelo.py",
-    "scripts/visualizacao/gerar_graficos.py"
+    "scripts/visualizacao/gerar_graficos.py",
+    "scripts/dashboard/app_evasao.py"
 ]
 
 # Criação do documento Word
