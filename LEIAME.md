@@ -141,6 +141,11 @@ tree -L 3
 │       ├── dados_ies_tratado_2022.csv
 │       ├── dados_ies_tratado_2023.csv
 │       ├── dados_ingresso_evasao_conclusao.csv
+│       ├── dados_transfer_learning_clean.csv
+│       ├── dados_transfer_learning.csv
+│       ├── dados_transfer_normalizado.csv
+│       ├── dados_transfer_padronizado.csv
+│       ├── entrada_modelos.csv
 │       ├── final_administracao.csv
 │       ├── final_direito.csv
 │       ├── final_eng_civil.csv
@@ -157,24 +162,30 @@ tree -L 3
 │       ├── medicina.png
 │       ├── taxa_evasao_administracao.html
 │       ├── taxa_evasao_administracao.png
+│       ├── taxa_evasao_administração.png
 │       ├── taxa_evasao_direito.html
 │       ├── taxa_evasao_direito.png
 │       ├── taxa_evasao_eng_civil.html
 │       ├── taxa_evasao_eng_civil.png
+│       ├── taxa_evasao_engenharia_civil.png
 │       ├── taxa_evasao_medicina.html
 │       └── taxa_evasao_medicina.png
 ├── LEIAME.md
 ├── LICENCA
 ├── log_erros.txt
 ├── modelos
+│   ├── base_modelo_neural.h5
 │   ├── modelos_salvos
+│   │   ├── modelo_finetuned_tcc.h5
 │   │   └── modelo_melhor_evasao.pkl
 │   └── resultados_modelos
 │       ├── matriz_confusao.png
 │       ├── metricas_modelos.txt
 │       └── metricas.txt
+├── pyhton.py
 ├── README.md
 ├── relatorios
+│   ├── appendice_scripts_codigo_fonte.docx
 │   ├── figuras
 │   │   ├── distribuicao_taxa_evasao.png
 │   │   ├── figura1.png
@@ -186,27 +197,47 @@ tree -L 3
 │   │   └── grafico_taxa_ingresso.png
 │   ├── logs
 │   │   └── log_treinamento.txt
+│   ├── relatorio_analitico_final.docx
 │   ├── relatorio_analitico_final.pdf
 │   └── tabelas
 │       └── tabela1.csv
 ├── requisitos.txt
-└── scripts
-    ├── analises
-    │   ├── analises.py
-    │   └── analises.R
-    ├── coleta_dados
-    │   ├── coleta_dados_oficiais.py
-    │   └── coletar_links_inep.py
-    ├── modelagem
-    │   └── treinamento_modelo.py
-    ├── processamento_dados
-    │   ├── pre_processamento.py
-    │   └── processamento_dados
-    ├── relatorio
-    │   └── gerar_relatorio_pdf.py
-    └── visualizacao
-        └── gerar_graficos.py
-
+├── resultados
+│   ├── comparacao_modelos_dispersao.png
+│   ├── comparacao_modelos_linha.png
+│   └── validacao_temporal_comparacao.png
+├── scripts
+│   ├── analises
+│   │   ├── analises.py
+│   │   ├── analises.R
+│   │   ├── comparar_modelos.py
+│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
+│   │   ├── prever_com_modelos.py
+│   │   ├── resumir_modelo_h5.py
+│   │   └── validar_modelos_temporais.py
+│   ├── coleta_dados
+│   │   ├── coleta_dados_oficiais.py
+│   │   └── coletar_links_inep.py
+│   ├── dashboard
+│   │   └── app_evasao.py
+│   ├── modelagem
+│   │   ├── gerar_base_modelo.py
+│   │   ├── treinamento_modelo_C4.5_Tree_J48.py
+│   │   ├── treinamento_modelo_Feature-based.py
+│   │   ├── treinamento_modelo_Fine-tuning.py
+│   │   └── treinamento_modelo_original.py
+│   ├── processamento_dados
+│   │   ├── pre_processamento_Transfer_Learn.py
+│   │   ├── pre_processamento.py
+│   │   ├── preparar_entrada_modelos.py
+│   │   └── processamento_dados
+│   ├── relatorio
+│   │   ├── apendices_scripts.py
+│   │   └── gerar_relatorio_pdf.py
+│   └── visualizacao
+│       ├── comparar_predicoes_cursos.py
+│       └── gerar_graficos.py
+└── scripts_modificados_0805.txt
 
 
 # Análise de Dados Acadêmicos de IES Públicas 
@@ -337,12 +368,33 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 
    - **Agora o modelo é treinado com os dados de 2009 a 2023**:
      ```bash
-     python scripts/modelagem/treinamento_modelo.py
+     python scripts/modelagem/treinamento_modelo_original.py
      ```
    - A avaliação é feita com:
      ```bash
      python scripts/visualizacao/gerar_graficos.py
      ```
+     ```bash
+     # Executar validação complementar com transferência de aprendizado
+     python scripts/analises/comparar_modelos.py
+     python scripts/analises/validar_modelos_temporais.py
+     python scripts/visualizacao/comparar_predicoes_cursos.py
+     ```
+
+4. **Testing and Validation (Transfer Learning)**  
+Após o modelo inicial, foi testada uma abordagem de transferência de aprendizado com os seguintes scripts:  
+```bash
+python scripts/processamento_dados/pre_processamento_Transfer_Learn.py
+python scripts/processamento_dados/processamento_dados/tratar_dados_Transfer_Learn.py
+python scripts/processamento_dados/preparar_entrada_modelos.py
+python scripts/modelagem/treinamento_modelo_Feature-based.py
+python scripts/modelagem/treinamento_modelo_C4.5_Tree_J48.py
+python scripts/analises/comparar_modelos.py
+python scripts/analises/validar_modelos_temporais.py
+python scripts/visualizacao/comparar_predicoes_cursos.py
+```
+
+Essa etapa validou a estabilidade dos modelos com diferentes abordagens, identificando baixa capacidade preditiva com as variáveis atuais e sugerindo aprimoramento futuro via engenharia de features. Os resultados também foram visualizados por curso, com boa aderência em alguns casos.
 
 ---
 
@@ -383,7 +435,7 @@ _Foto 1: Correção no nome de algumas pastas_
    - **ANTES:** Modelos baseados em séries históricas.  
    - **AGORA:** Modelo treinado **exclusivamente com dados de 2009 a 2023**.  
    ```bash
-   python scripts/modelagem/treinamento_modelo.py
+   python scripts/modelagem/treinamento_modelo_original.py
    python scripts/visualizacao/gerar_graficos.py
    ```
 
@@ -426,7 +478,7 @@ ___________________________________________________________________________
 
 # 3.	Treinamento do Modelo
 # Treine o modelo de aprendizado de máquina:
-# python scripts/modelagem/treinamento_modelo.py
+# python scripts/modelagem/treinamento_modelo_original.py
 
 # 4.	Geração de Gráficos
 # Gere visualizações dos resultados:
@@ -463,9 +515,9 @@ ___________________________________________________________________________
 
 # Descrição: Script para limpar e preparar os dados para modelagem.
 
-# 6.3. treinamento_modelo.py
+# 6.3. treinamento_modelo_original.py
 
-# Caminho: /scripts/modelagem/treinamento_modelo.py
+# Caminho: /scripts/modelagem/treinamento_modelo_original.py
 
 # Descrição: Script para treinar o modelo de aprendizado de máquina.
 
@@ -488,7 +540,7 @@ ___________________________________________________________________________
 
 # Caminho: /modelos/modelos_salvos/modelo_random_forest.pkl
 
-# Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo.py ou pelo notebook correspondente.
+# Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo_original.py.
 
 
 ## Publicações e Submissões
@@ -560,7 +612,7 @@ Se utilizar este projeto ou partes dele em artigos ou outros trabalhos acadêmic
 
 > Este projeto foi desenvolvido no contexto do curso de Bacharelado em Ciência de Dados da UNIVESP, como parte do **Trabalho de Conclusão de Curso** (TCC).
 
-# 	•	Integração da Aplicação: Os scripts e notebooks fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
+# 	•	Integração da Aplicação: Os scripts fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
 # 	•	Dados Sensíveis: Ao trabalhar com dados reais, assegure-se de estar em conformidade com as leis de proteção de dados, como a LGPD.
 # 	•	Atualizações Necessárias: Alguns códigos utilizam URLs de exemplo ou estruturas genéricas. Você precisará ajustá-los de acordo com as fontes de dados reais e a estrutura dos sites ou APIs que irá utilizar.
 # 	•	Dependências Adicionais: Se utilizar bibliotecas ou ferramentas adicionais, lembre-se de adicioná-las aos arquivos de requisitos (requisitos.txt ou ambiente.yml).

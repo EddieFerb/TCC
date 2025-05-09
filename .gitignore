@@ -29,8 +29,12 @@ log_erros.txt
 
 # Cuidado ao ignorar todas as extensões .txt e .csv!
 # Se você precisa versionar documentos ou CSVs importantes, remova ou crie exceções.
-*.txt
+# Ignorar arquivos CSV por padrão, exceto os usados pelo app
 *.csv
+!dados/processado/dados_ingresso_evasao_conclusao.csv
+!dados/processado/dados_gerais_por_curso.csv
+!dados/processado/dados_por_regiao.csv
+*.txt
 
 # ============================
 # Arquivos de configuração e ambiente
