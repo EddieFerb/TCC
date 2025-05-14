@@ -26,8 +26,12 @@ script_paths = [
     "scripts/modelagem/treinamento_modelo_Feature-based.py",
     "scripts/modelagem/treinamento_modelo_Fine-tuning.py",
     "scripts/analises/analises.py",
-    "scripts/modelagem/treinamento_modelo.py",
+    "scripts/analises/comparar_modelos.py",
+    "scripts/analises/validar_modelos_temporais.py",
+    "scripts/analises/prever_com_modelos.py",
+    "scripts/analises/resumir_modelo_h5.py",
     "scripts/visualizacao/gerar_graficos.py",
+    "scripts/visualizacao/comparar_predicoes_cursos.py",
     "scripts/dashboard/app_evasao.py"
 ]
 

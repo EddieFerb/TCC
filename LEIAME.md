@@ -223,7 +223,6 @@ tree -L 3
 │   │   ├── analises.py
 │   │   ├── analises.R
 │   │   ├── comparar_modelos.py
-│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
 │   │   ├── prever_com_modelos.py
 │   │   ├── resumir_modelo_h5.py
 │   │   └── validar_modelos_temporais.py
@@ -660,7 +659,7 @@ python scripts/relatorio/gerar_relatorio_pdf.py
 
 # Descrição: Compila os principais trechos de código dos scripts utilizados no projeto para serem incorporados nos apêndices do relatório técnico.
 
-# 6.8.  Dashboard de Visualização Interativa
+### 5. Dashboard de Visualização Interativa
 Requer a biblioteca Streamlit instalada no ambiente virtual.
 Após todo o processamento e validação, você pode iniciar o painel interativo com Streamlit:
 ```bash
