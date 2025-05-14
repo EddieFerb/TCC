@@ -223,7 +223,6 @@ tree -L 3
 │   │   ├── analises.py
 │   │   ├── analises.R
 │   │   ├── comparar_modelos.py
-│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
 │   │   ├── prever_com_modelos.py
 │   │   ├── resumir_modelo_h5.py
 │   │   └── validar_modelos_temporais.py
@@ -280,6 +279,8 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 - Anaconda ou Miniconda para gerenciamento de ambiente (recomendado)
 - streamlit (para execução do dashboard interativo)
 - scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
+- streamlit (para execução do dashboard interativo)
+- scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
 
 ### Configuração do Ambiente
 
@@ -290,6 +291,37 @@ Crie o ambiente a partir do arquivo `ambiente/ambiente.yml`:
 ```bash
 conda env create -f ambiente/ambiente.yml
 conda activate TCC_env
+```
+
+#### Para desenvolvedores no macOS
+
+Use o Terminal do macOS e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Windows
+
+Use o Prompt de Comando ou PowerShell e execute:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Linux/Ubuntu
+
+Use o terminal e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
 ```
 
 #### Para desenvolvedores no macOS
@@ -510,6 +542,9 @@ _Foto 1: Correção no nome de algumas pastas_
 python scripts/analises/prever_com_modelos.py
 python scripts/analises/resumir_modelo_h5.py
 
+python scripts/analises/prever_com_modelos.py
+python scripts/analises/resumir_modelo_h5.py
+
 ---
 
 ## **Próximos Passos**
@@ -624,7 +659,7 @@ python scripts/relatorio/gerar_relatorio_pdf.py
 
 # Descrição: Compila os principais trechos de código dos scripts utilizados no projeto para serem incorporados nos apêndices do relatório técnico.
 
-# 6.8.  Dashboard de Visualização Interativa
+### 5. Dashboard de Visualização Interativa
 Requer a biblioteca Streamlit instalada no ambiente virtual.
 Após todo o processamento e validação, você pode iniciar o painel interativo com Streamlit:
 ```bash
