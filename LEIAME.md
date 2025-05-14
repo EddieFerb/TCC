@@ -211,7 +211,6 @@ tree -L 3
 │   │   ├── analises.py
 │   │   ├── analises.R
 │   │   ├── comparar_modelos.py
-│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
 │   │   ├── prever_com_modelos.py
 │   │   ├── resumir_modelo_h5.py
 │   │   └── validar_modelos_temporais.py
@@ -266,6 +265,8 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 
 - Python 3.8 ou superior
 - Anaconda ou Miniconda para gerenciamento de ambiente (recomendado)
+- streamlit (para execução do dashboard interativo)
+- scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
 
 ### Configuração do Ambiente
 
@@ -276,6 +277,37 @@ Crie o ambiente a partir do arquivo `ambiente/ambiente.yml`:
 ```bash
 conda env create -f ambiente/ambiente.yml
 conda activate TCC_env
+```
+
+#### Para desenvolvedores no macOS
+
+Use o Terminal do macOS e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Windows
+
+Use o Prompt de Comando ou PowerShell e execute:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Linux/Ubuntu
+
+Use o terminal e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
 
 
 Utilização da Estrutura de Pastas
@@ -439,6 +471,9 @@ _Foto 1: Correção no nome de algumas pastas_
    python scripts/visualizacao/gerar_graficos.py
    ```
 
+python scripts/analises/prever_com_modelos.py
+python scripts/analises/resumir_modelo_h5.py
+
 ---
 
 ## **Próximos Passos**
@@ -532,6 +567,31 @@ ___________________________________________________________________________
 # Caminho: scripts/analises/analises.py
 
 # Descrição: Script Python para análise exploratória dos dados (EDA).
+
+# 6.6. gerar_relatorio_pdf.py
+
+# Caminho: /scripts/relatorio/gerar_relatorio_pdf.py
+
+# Descrição: Gera automaticamente o relatório final do projeto em formato PDF, utilizando templates pré-definidos. É a etapa final após as análises.
+
+# Execução:
+```bash
+python scripts/relatorio/gerar_relatorio_pdf.py
+```
+
+# 6.7. apendices_scripts.py
+
+# Caminho: /scripts/relatorio/apendices_scripts.py
+
+# Descrição: Compila os principais trechos de código dos scripts utilizados no projeto para serem incorporados nos apêndices do relatório técnico.
+
+### 5. Dashboard de Visualização Interativa
+Requer a biblioteca Streamlit instalada no ambiente virtual.
+Após todo o processamento e validação, você pode iniciar o painel interativo com Streamlit:
+```bash
+streamlit run scripts/dashboard/app_evasao.py
+```
+Este dashboard permite explorar os dados processados e as predições de forma interativa.
 
 
 # 7. Modelos
@@ -701,3 +761,5 @@ Se utilizar este projeto ou partes dele em artigos ou outros trabalhos acadêmic
 # 	•	Scripts para gerar gráficos diretamente a partir dos dados processados.
 
 # Esta abordagem maximiza a utilização dos microdados, atendendo ao foco do projeto em ingresso, evasão e conclusão dos cursos.
+
+⚠️ Nota: O arquivo `pyhton.py` foi utilizado apenas para testes temporários e pode ser removido nas versões finais.
