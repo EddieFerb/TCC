@@ -223,6 +223,7 @@ tree -L 3
 │   │   ├── analises.py
 │   │   ├── analises.R
 │   │   ├── comparar_modelos.py
+│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
 │   │   ├── prever_com_modelos.py
 │   │   ├── resumir_modelo_h5.py
 │   │   └── validar_modelos_temporais.py
@@ -670,40 +671,11 @@ Este dashboard permite explorar os dados processados e as predições de forma i
 
 # 7. Modelos
 
-## 7.1. treinamento_modelo_original.py
+# 7.1. modelo_random_forest.pkl
 
-**Caminho:** `/scripts/modelagem/treinamento_modelo_original.py`  
-**Descrição:** Treina o modelo base com os dados tratados de 2009 a 2023.
+# Caminho: /modelos/modelos_salvos/modelo_random_forest.pkl
 
-## 7.2. preparar_entrada_modelos.py
-
-**Caminho:** `/scripts/processamento_dados/preparar_entrada_modelos.py`  
-**Descrição:** Prepara a base de dados para entrada nos modelos com transferência de aprendizado.
-
-## 7.3. pre_processamento_Transfer_Learn.py
-
-**Caminho:** `/scripts/processamento_dados/pre_processamento_Transfer_Learn.py`  
-**Descrição:** Pré-processamento específico para experimentos de transferência de aprendizado.
-
-## 7.4. gerar_base_modelo.py
-
-**Caminho:** `/scripts/modelagem/gerar_base_modelo.py`  
-**Descrição:** Gera e consolida a base de dados final utilizada para diferentes modelos.
-
-## 7.5. treinamento_modelo_Fine-tuning.py
-
-**Caminho:** `/scripts/modelagem/treinamento_modelo_Fine-tuning.py`  
-**Descrição:** Ajuste fino de modelos utilizando abordagens de transferência de aprendizado.
-
-## 7.6. treinamento_modelo_Feature-based.py
-
-**Caminho:** `/scripts/modelagem/treinamento_modelo_Feature-based.py`  
-**Descrição:** Treina modelos com foco em seleção e engenharia de atributos (features).
-
-## 7.7. treinamento_modelo_C4.5_Tree_J48.py
-
-**Caminho:** `/scripts/modelagem/treinamento_modelo_C4.5_Tree_J48.py`  
-**Descrição:** Treinamento de árvore de decisão C4.5 (J48) como modelo alternativo para comparação.
+# Descrição: Arquivo contendo o modelo Random Forest treinado. Este arquivo é gerado pelo script treinamento_modelo_original.py.
 
 
 ## Publicações e Submissões
