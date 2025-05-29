@@ -4,9 +4,9 @@ requests
 matplotlib
 seaborn
 scikit-learn
-pandas==1.5.3
-numpy==1.23.5
-scikit-learn==1.2.2
-matplotlib==3.7.1
-seaborn==0.12.2
-streamlit==1.21.0
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+streamlit
