@@ -223,6 +223,7 @@ tree -L 3
 │   │   ├── analises.py
 │   │   ├── analises.R
 │   │   ├── comparar_modelos.py
+│   │   ├── from tensorflow.keras.models import load_model  modelo_h5 = load_model('modelos
 │   │   ├── prever_com_modelos.py
 │   │   ├── resumir_modelo_h5.py
 │   │   └── validar_modelos_temporais.py
