@@ -101,4 +101,4 @@ Leia_me_*.pdf
 # ============================
 # Outros arquivos que podem conter dados sensíveis ou que não são relevantes para o versionamento
 # ============================
-# Caso haja arquivos de configuração de ferramentas de build ou cache de IDEs específicos, adicione-os aqui.
+# Caso haja arquivos de configuração de ferramentas de build ou cache de IDEs específicos, adicione-os aqui.*.DS_Store

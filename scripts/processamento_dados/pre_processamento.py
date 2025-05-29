@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-=======
 # pre_processamento.py - Script para carregar, padronizar e salvar os microdados do INEP/MEC.
 # Processa os dados brutos (IES e Cursos) por ano, realizando limpeza, renomeação e formatação padronizada.
 
->>>>>>> testing_and_validation
 import os
 import pandas as pd
 import unicodedata
 import re
-<<<<<<< HEAD
-from io import StringIO
-=======
 import numpy as np
 from io import StringIO
 import glob
->>>>>>> testing_and_validation
 
 # ==========================================================================
 # CONFIGURAÇÕES GERAIS

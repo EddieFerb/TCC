@@ -4,16 +4,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-<<<<<<< HEAD
-
-def main():
-    df = pd.read_csv('dados/processado/ies_dados_limpos.csv')
-=======
 import unicodedata
 
 def main():
     df = pd.read_csv('dados/processado/dados_ingresso_evasao_conclusao.csv', sep=';', on_bad_lines='skip')
->>>>>>> testing_and_validation
     
     # Gráfico de distribuição da taxa de evasão
     plt.figure(figsize=(10,6))
@@ -24,17 +18,6 @@ def main():
     plt.savefig('relatorios/figuras/distribuicao_taxa_evasao.png')
     plt.close()
     
-<<<<<<< HEAD
-    # Gráfico de taxa de evasão por estado
-    plt.figure(figsize=(12,8))
-    sns.boxplot(x='estado', y='taxa_evasao', data=df)
-    plt.title('Taxa de Evasão por Estado')
-    plt.xlabel('Estado')
-    plt.ylabel('Taxa de Evasão (%)')
-    plt.savefig('relatorios/figuras/taxa_evasao_por_estado.png')
-    plt.close()
-    
-=======
     # Gráfico de distribuição da taxa de conclusão
     plt.figure(figsize=(10,6))
     sns.histplot(df['taxa_conclusao'], bins=20, kde=True, color='green')
@@ -79,7 +62,6 @@ def main():
     plt.savefig('relatorios/figuras/grafico_mapa_calor_correlacoes.png')
     plt.close()
 
->>>>>>> testing_and_validation
     print('Gráficos gerados e salvos em relatorios/figuras/')
 
 if __name__ == '__main__':
