@@ -146,6 +146,11 @@ tree -L 3
 │       ├── dados_transfer_normalizado.csv
 │       ├── dados_transfer_padronizado.csv
 │       ├── entrada_modelos.csv
+│       ├── dados_transfer_learning_clean.csv
+│       ├── dados_transfer_learning.csv
+│       ├── dados_transfer_normalizado.csv
+│       ├── dados_transfer_padronizado.csv
+│       ├── entrada_modelos.csv
 │       ├── final_administracao.csv
 │       ├── final_direito.csv
 │       ├── final_eng_civil.csv
@@ -163,10 +168,12 @@ tree -L 3
 │       ├── taxa_evasao_administracao.html
 │       ├── taxa_evasao_administracao.png
 │       ├── taxa_evasao_administração.png
+│       ├── taxa_evasao_administração.png
 │       ├── taxa_evasao_direito.html
 │       ├── taxa_evasao_direito.png
 │       ├── taxa_evasao_eng_civil.html
 │       ├── taxa_evasao_eng_civil.png
+│       ├── taxa_evasao_engenharia_civil.png
 │       ├── taxa_evasao_engenharia_civil.png
 │       ├── taxa_evasao_medicina.html
 │       └── taxa_evasao_medicina.png
@@ -175,7 +182,9 @@ tree -L 3
 ├── log_erros.txt
 ├── modelos
 │   ├── base_modelo_neural.h5
+│   ├── base_modelo_neural.h5
 │   ├── modelos_salvos
+│   │   ├── modelo_finetuned_tcc.h5
 │   │   ├── modelo_finetuned_tcc.h5
 │   │   └── modelo_melhor_evasao.pkl
 │   └── resultados_modelos
@@ -183,8 +192,10 @@ tree -L 3
 │       ├── metricas_modelos.txt
 │       └── metricas.txt
 ├── pyhton.py
+├── pyhton.py
 ├── README.md
 ├── relatorios
+│   ├── appendice_scripts_codigo_fonte.docx
 │   ├── appendice_scripts_codigo_fonte.docx
 │   ├── figuras
 │   │   ├── distribuicao_taxa_evasao.png
@@ -197,6 +208,7 @@ tree -L 3
 │   │   └── grafico_taxa_ingresso.png
 │   ├── logs
 │   │   └── log_treinamento.txt
+│   ├── relatorio_analitico_final.docx
 │   ├── relatorio_analitico_final.docx
 │   ├── relatorio_analitico_final.pdf
 │   └── tabelas
@@ -267,6 +279,8 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
 - Anaconda ou Miniconda para gerenciamento de ambiente (recomendado)
 - streamlit (para execução do dashboard interativo)
 - scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
+- streamlit (para execução do dashboard interativo)
+- scikit-learn, pandas, numpy, matplotlib, seaborn (para modelagem e visualização)
 
 ### Configuração do Ambiente
 
@@ -277,6 +291,37 @@ Crie o ambiente a partir do arquivo `ambiente/ambiente.yml`:
 ```bash
 conda env create -f ambiente/ambiente.yml
 conda activate TCC_env
+```
+
+#### Para desenvolvedores no macOS
+
+Use o Terminal do macOS e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Windows
+
+Use o Prompt de Comando ou PowerShell e execute:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r ambiente/requisitos.txt
+```
+
+#### Para desenvolvedores no Linux/Ubuntu
+
+Use o terminal e execute:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r ambiente/requisitos.txt
+```
 ```
 
 #### Para desenvolvedores no macOS
@@ -401,11 +446,33 @@ Este projeto tem como objetivo desenvolver uma aplicação para análise de dado
    - **Agora o modelo é treinado com os dados de 2009 a 2023**:
      ```bash
      python scripts/modelagem/treinamento_modelo_original.py
+     python scripts/modelagem/treinamento_modelo_original.py
      ```
    - A avaliação é feita com:
      ```bash
      python scripts/visualizacao/gerar_graficos.py
      ```
+     ```bash
+     # Executar validação complementar com transferência de aprendizado
+     python scripts/analises/comparar_modelos.py
+     python scripts/analises/validar_modelos_temporais.py
+     python scripts/visualizacao/comparar_predicoes_cursos.py
+     ```
+
+4. **Testing and Validation (Transfer Learning)**  
+Após o modelo inicial, foi testada uma abordagem de transferência de aprendizado com os seguintes scripts:  
+```bash
+python scripts/processamento_dados/pre_processamento_Transfer_Learn.py
+python scripts/processamento_dados/processamento_dados/tratar_dados_Transfer_Learn.py
+python scripts/processamento_dados/preparar_entrada_modelos.py
+python scripts/modelagem/treinamento_modelo_Feature-based.py
+python scripts/modelagem/treinamento_modelo_C4.5_Tree_J48.py
+python scripts/analises/comparar_modelos.py
+python scripts/analises/validar_modelos_temporais.py
+python scripts/visualizacao/comparar_predicoes_cursos.py
+```
+
+Essa etapa validou a estabilidade dos modelos com diferentes abordagens, identificando baixa capacidade preditiva com as variáveis atuais e sugerindo aprimoramento futuro via engenharia de features. Os resultados também foram visualizados por curso, com boa aderência em alguns casos.
      ```bash
      # Executar validação complementar com transferência de aprendizado
      python scripts/analises/comparar_modelos.py
@@ -468,8 +535,12 @@ _Foto 1: Correção no nome de algumas pastas_
    - **AGORA:** Modelo treinado **exclusivamente com dados de 2009 a 2023**.  
    ```bash
    python scripts/modelagem/treinamento_modelo_original.py
+   python scripts/modelagem/treinamento_modelo_original.py
    python scripts/visualizacao/gerar_graficos.py
    ```
+
+python scripts/analises/prever_com_modelos.py
+python scripts/analises/resumir_modelo_h5.py
 
 python scripts/analises/prever_com_modelos.py
 python scripts/analises/resumir_modelo_h5.py
@@ -514,6 +585,7 @@ ___________________________________________________________________________
 # 3.	Treinamento do Modelo
 # Treine o modelo de aprendizado de máquina:
 # python scripts/modelagem/treinamento_modelo_original.py
+# python scripts/modelagem/treinamento_modelo_original.py
 
 # 4.	Geração de Gráficos
 # Gere visualizações dos resultados:
@@ -551,7 +623,9 @@ ___________________________________________________________________________
 # Descrição: Script para limpar e preparar os dados para modelagem.
 
 # 6.3. treinamento_modelo_original.py
+# 6.3. treinamento_modelo_original.py
 
+# Caminho: /scripts/modelagem/treinamento_modelo_original.py
 # Caminho: /scripts/modelagem/treinamento_modelo_original.py
 
 # Descrição: Script para treinar o modelo de aprendizado de máquina.
@@ -672,6 +746,7 @@ Se utilizar este projeto ou partes dele em artigos ou outros trabalhos acadêmic
 
 > Este projeto foi desenvolvido no contexto do curso de Bacharelado em Ciência de Dados da UNIVESP, como parte do **Trabalho de Conclusão de Curso** (TCC).
 
+# 	•	Integração da Aplicação: Os scripts fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
 # 	•	Integração da Aplicação: Os scripts fornecidos estão interligados conforme o fluxo de trabalho do projeto. Certifique-se de que os caminhos relativos nos scripts correspondam à estrutura de pastas.
 # 	•	Dados Sensíveis: Ao trabalhar com dados reais, assegure-se de estar em conformidade com as leis de proteção de dados, como a LGPD.
 # 	•	Atualizações Necessárias: Alguns códigos utilizam URLs de exemplo ou estruturas genéricas. Você precisará ajustá-los de acordo com as fontes de dados reais e a estrutura dos sites ou APIs que irá utilizar.
