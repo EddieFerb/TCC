@@ -7,70 +7,49 @@
   <title>Dashboard Acessível - Evasão IES</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+<figure>
+  <img src="{{ url_for('static', filename='graficos/grafico_taxas.png') }}" alt="Gráfico ilustrativo de taxas educacionais" aria-describedby="grafico-descricao" role="img" />
+  <figcaption class="visually-hidden" hidden>Gráfico ilustrativo de taxas educacionais</figcaption>
+</figure>
 <style>
     :root {
-      /* WCAG 1.4.3: Contraste mínimo de cores (Port BR) */
-      /* WCAG 1.4.3: Minimum color contrast (En) */
       --background-light: #ffffff;
-      --text-light: #1a1a1a;
-      --background-dark: #121212;
-      --text-dark: #e0e0e0;
-      --highlight: #005bb5;
-      --button-bg: #005bb5;
+      --text-light: #1d1d1f;
+      --background-dark: #000000;
+      --text-dark: #f5f5f7;
+      --highlight: #0071e3;
+      --button-bg: #0071e3;
       --button-text: #ffffff;
-      --button-hover: #003f7d;
+      --button-hover: #005bb5;
       --border-radius: 12px;
       --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
+    html[data-theme='dark'] {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+    }
+    html[data-theme='light'] {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
     body {
       font-family: var(--font-family);
-      font-size: 17px;
-      color: var(--text-light);
-      background-color: var(--background-light);
       margin: 0;
       padding: 1rem;
       line-height: 1.6;
-    }
-    /* (pt-BR) WCAG 1.4.3: Contraste adequado no tema escuro para títulos */
-    /* (en) WCAG 1.4.3: Ensure proper contrast for headings in dark mode */
-    html[data-theme="dark"] h1,
-    html[data-theme="dark"] h2,
-    html[data-theme="dark"] label {
-      color: var(--text-dark);
-    }
-    h1, h2 {
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5em;
-    }
-    button {
-      font-family: var(--font-family);
-      font-size: 17px;
-      border-radius: 980px;
-      padding: 12px 24px;
-      /* WCAG 2.5.8: Tamanho mínimo do alvo clicável (Port BR) */
-      /* WCAG 2.5.8: Minimum target size (En) */
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 1rem;
-    }
-    button:hover {
-      background-color: var(--button-hover);
-    }
-    /* WCAG 2.4.7: Foco visível para navegação por teclado (Port BR) */
-    /* WCAG 2.4.7: Visible focus for keyboard navigation (En) */
-    button:focus {
-      outline: 3px solid var(--highlight);
-      outline-offset: 2px;
+      background-color: inherit;
+      color: inherit;
     }
     header {
-      background-color: transparent;
-      color: var(--text-light);
-      padding: 1rem 0;
+      background-color: var(--highlight);
+      color: white;
+      padding: 1rem;
       text-align: center;
+      border-radius: var(--border-radius);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
     }
     main {
       max-width: 960px;
@@ -80,48 +59,13 @@
       margin-top: 2rem;
     }
     label, select, button {
-      font-size: 17px;
+      font-size: 1rem;
       margin-top: 1rem;
-      font-family: var(--font-family);
-    }
-    /* Ensure label, tooltip, and clear button are inline and aligned */
-    label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    label span.tooltip {
-      display: inline;
-    }
-    label button {
-      margin-top: 0;
-      padding: 6px 12px;
-    }
-    select {
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-size: 17px;
-      font-family: var(--font-family);
-      margin-top: 0.5rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    input[type="number"], input[type="text"] {
-      padding: 12px 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      font-size: 17px;
-      font-family: var(--font-family);
-      width: 100%;
-      box-sizing: border-box;
-      margin-top: 0.5rem;
+      display: block;
     }
     .tooltip {
       position: relative;
       cursor: help;
-      font-size: 17px;
-      font-family: var(--font-family);
     }
     .tooltip::after {
       content: attr(data-tooltip);
@@ -129,14 +73,13 @@
       bottom: 125%;
       background-color: #333;
       color: white;
-      padding: 8px 12px;
-      border-radius: 12px;
-      font-size: 14px;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.875rem;
       opacity: 0;
       transition: opacity 0.3s;
       white-space: nowrap;
       pointer-events: none;
-      z-index: 10;
     }
     .tooltip:hover::after {
       opacity: 1;
@@ -144,8 +87,6 @@
     .controls {
       display: flex;
       gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
     }
     .visually-hidden {
       position: absolute;
@@ -158,52 +99,41 @@
       white-space: nowrap;
       border: 0;
     }
+    button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.2rem 3rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    select {
+      padding: 0.4rem;
+      border-radius: var(--border-radius);
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
     img {
       max-width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: var(--border-radius);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-      margin-top: 1rem;
     }
-    html.inverted-contrast {
-      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
-      background-color: #000 !important;
-      color: #ffffff !important;
-    }
-    html.inverted-contrast img {
-      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
-    }
-    /* Liquid Glass + Neumorfismo styles */
-    .liquid-glass-card {
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      background-color: rgba(255, 255, 255, 0.25);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15),
-                  -8px -8px 16px rgba(255, 255, 255, 0.2);
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 960px;
+
+    input[type="number"], input[type="text"] {
+      padding: 0.4rem;
+      border-radius: var(--border-radius);
+      border: 1px solid #ccc;
+      font-size: 1rem;
       width: 100%;
-      color: #000;
     }
-    html[data-theme="dark"] .liquid-glass-card {
-      background-color: rgba(18, 18, 18, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #e0e0e0;
-    }
-  </style>
-  <style>
-  html.daltonismo-mode {
-    filter: grayscale(100%) contrast(120%);
-  }
-  body.big-cursor {
-    cursor: url('big-cursor.png'), auto;
-  }
-  html.legenda-ativa video::cue {
-    display: block !important;
-  }
   </style>
   <script>
     function toggleTheme() {
@@ -224,29 +154,14 @@
     document.addEventListener('DOMContentLoaded', () => {
       const exportButton = document.querySelector('button[aria-label="Exportar gráficos como imagem"]');
       const clearButton = document.querySelector('button[aria-label="Limpar filtros e retornar à visualização padrão"]');
-      const cursoInput = document.getElementById('curso-input');
+      const cursoSelect = document.getElementById('curso-select');
       const anoInput = document.getElementById('ano-input');
       const iesInput = document.getElementById('ies-input');
       const graficoContainer = document.getElementById('grafico-container');
 
-      // Inline clear buttons for each filter
-      const clearCurso = document.querySelector('label[for="curso-input"] button');
-      const clearAno = document.querySelector('label[for="ano-input"] button');
-      const clearIes = document.querySelector('label[for="ies-input"] button');
-
-      clearCurso.addEventListener('click', () => {
-        document.getElementById('curso-input').value = '';
-      });
-      clearAno.addEventListener('click', () => {
-        document.getElementById('ano-input').value = '';
-      });
-      clearIes.addEventListener('click', () => {
-        document.getElementById('ies-input').value = '';
-      });
-
       // Function to fetch and update the graph dynamically
       async function fetchGrafico() {
-        const curso = cursoInput.value;
+        const curso = cursoSelect.value;
         const ano = anoInput.value;
         const ies = iesInput.value;
 
@@ -276,217 +191,80 @@
         alert('Funcionalidade de exportação ainda não implementada.');
       });
 
-      if (clearButton) {
-        clearButton.addEventListener('click', () => {
-          cursoInput.value = '';
-          anoInput.value = '';
-          iesInput.value = '';
-          graficoContainer.innerHTML = '';
-        });
-      }
+      clearButton.addEventListener('click', () => {
+        cursoSelect.value = 'direito';
+        anoInput.value = '';
+        iesInput.value = '';
+        graficoContainer.innerHTML = '';
+      });
 
       // Optionally, fetch graph when filters change
-      [cursoInput, anoInput, iesInput].forEach(element => {
+      [cursoSelect, anoInput, iesInput].forEach(element => {
         element.addEventListener('change', fetchGrafico);
       });
+
       // If you want a button to generate graph, you can add it here
       // Or fetch graph automatically on filter changes as above
     });
   </script>
-  <script>
-    function ajustarFonte(acao) {
-      const html = document.documentElement;
-      const estiloAtual = window.getComputedStyle(html).fontSize;
-      let tamanho = parseFloat(estiloAtual);
-
-      // WCAG 1.4.4: Texto redimensionável até 200% (Port BR)
-      // WCAG 1.4.4: Resize text up to 200% (En)
-      const tamanhoBase = 17; // base font size in px
-      const maxTamanho = tamanhoBase * 2; // 200%
-      const minTamanho = tamanhoBase * 0.7; // about 70% minimum for readability
-
-      const incremento = 2;
-
-      if (acao === 'aumentar' && tamanho < maxTamanho) {
-        tamanho += incremento;
-      } else if (acao === 'diminuir' && tamanho > minTamanho) {
-        tamanho -= incremento;
-      }
-
-      html.style.fontSize = `${tamanho}px`;
-
-      // Ajusta também espaçamento de linha para melhorar a legibilidade
-      document.body.style.lineHeight = tamanho >= 20 ? '1.8' : '1.6';
-    }
-  </script>
 </head>
 <body role="document">
-  
-    <header role="banner">
-      <div style="display: flex; gap: 0.5rem; justify-content: center;">
-        <button onclick="
-          document.documentElement.classList.remove('inverted-contrast');
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.body.style.backgroundColor = '#ffffff';
-          document.body.style.color = '#1a1a1a';
-        " aria-label="Ativar tema claro" title="Ativar tema claro">Contraste Claro</button>
-        <button onclick="
-          document.documentElement.classList.remove('inverted-contrast');
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.body.style.backgroundColor = '#121212';
-          document.body.style.color = '#e0e0e0';
-        " aria-label="Ativar tema escuro" title="Ativar tema escuro">Contraste Escuro</button>
-        <button onclick="
-          if (!document.documentElement.classList.contains('inverted-contrast')) {
-            document.documentElement.classList.add('inverted-contrast');
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.body.style.backgroundColor = '#ffffff';
-            document.body.style.color = '#1a1a1a';
-          } else {
-            document.documentElement.classList.remove('inverted-contrast');
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.body.style.backgroundColor = '#ffffff';
-            document.body.style.color = '#1a1a1a';
-          }
-        " aria-label="Ativar contraste invertido" title="Ativar contraste invertido">Contraste Invertido</button>
-        <button onclick="ajustarFonte('aumentar')" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
-        <button onclick="ajustarFonte('diminuir')" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A−</button>
+  <header role="banner">
+    <h1 id="dashboard-title">Dashboard Acessível - Taxas em IES Públicas</h1>
+    <button onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">🌙 Alternar Tema</button>
+  </header>
+  <main role="main">
+    <section aria-labelledby="filtros">
+      <h2 id="filtros">Filtros e Controle</h2>
+      <label for="curso-select">Curso <span class="tooltip" data-tooltip="Nome do curso conforme base INEP">❔</span></label>
+      <select id="curso-select" aria-describedby="curso-help">
+        <option value="direito">Direito</option>
+        <option value="administracao">Administração</option>
+        <option value="engenharia">Engenharia Civil</option>
+        <option value="medicina">Medicina</option>
+      </select>
+      <p id="curso-help" class="visually-hidden">Selecione o curso para visualizar os dados</p>
+      <div class="controls">
+        <button aria-label="Exportar gráficos como imagem" title="Exportar gráfico atual como imagem">📤 Exportar</button>
+        <button aria-label="Limpar filtros e retornar à visualização padrão" title="Limpa os filtros e recarrega os dados">🧹 Limpar Filtros</button>
       </div>
-      <h1 id="dashboard-title">Taxas de Conclusão e Desistência em Instituições de Ensino Superior (IES)</h1>
-    </header>
-  
-    <main role="main">
-      <div class="liquid-glass-card">
-        <section aria-labelledby="filtros">
-          <h2 id="filtros">Filtros e Controle</h2>
-          <label for="curso-input">Curso <span class="tooltip" data-tooltip="Digite o nome do curso conforme Ministério da Educação (MEC)">❔</span><button aria-label="Limpar filtros do curso" title="Limpar filtros do curso">🧹</button></label>
-          <input type="text" id="curso-input" aria-describedby="curso-help" placeholder="Ex: Direito" />
-          <p id="curso-help" class="visually-hidden">Digite o curso desejado para visualizar os dados.</p>
-          <label for="ano-input">Ano <span class="tooltip" data-tooltip="Ano de referência dos dados">❔</span><button aria-label="Limpar filtros do ano" title="Limpar filtros do ano">🧹</button></label>
-          <input type="number" id="ano-input" min="2009" max="2023" aria-describedby="ano-help" aria-label="Campo de ano para filtro de dados" placeholder="Ex: 2020" />
-          <p id="ano-help" class="visually-hidden">Digite o ano desejado para filtrar os dados.</p>
-          <label for="ies-input">Instituição (IES) <span class="tooltip" data-tooltip="Nome da instituição conforme Ministério da Educação (MEC)">❔</span><button aria-label="Limpar filtros da instituição" title="Limpar filtros da instituição">🧹</button></label>
-          <input type="text" id="ies-input" aria-describedby="ies-help" aria-label="Campo para digitar nome da IES" placeholder="Ex: UEL" />
-          <p id="ies-help" class="visually-hidden">Digite o nome da instituição para filtrar os dados.</p>
-        </section>
+      <label for="ano-input">Ano <span class="tooltip" data-tooltip="Ano de referência dos dados">❔</span></label>
+      <input type="number" id="ano-input" min="2009" max="2023" aria-label="Campo de ano para filtro de dados" placeholder="Ex: 2020" />
+
+      <label for="ies-input">Instituição (IES) <span class="tooltip" data-tooltip="Nome da instituição conforme dados do INEP">❔</span></label>
+      <input type="text" id="ies-input" aria-label="Campo para digitar nome da IES" placeholder="Ex: UEL" />
+    </section>
+    <section aria-labelledby="graficos">
+      <h2 id="graficos">Visualização de Dados</h2>
+      <div id="grafico-container">
+        {% if grafico_url %}
+          <img src="{{ url_for('static', filename=grafico_url) }}" alt="Gráfico gerado dinamicamente" role="img" aria-describedby="grafico-descricao">
+        {% endif %}
       </div>
-      <div class="liquid-glass-card">
-        <section aria-labelledby="graficos">
-          <button aria-label="Exportar gráficos como imagem" title="Exportar gráfico atual como imagem">📤 Exportar</button>
-          <h2 id="graficos">Visualização de Dados</h2>
-          <div id="grafico-container">
-            {% if grafico_url %}
-              <!-- WCAG 1.1.1: Texto alternativo para imagens (Port BR) -->
-              <!-- WCAG 1.1.1: Text alternatives for images (En) -->
-              <img src="{{ url_for('static', filename=grafico_url) }}" alt="Gráfico gerado dinamicamente mostrando evolução das taxas de evasão" role="img" aria-describedby="grafico-descricao">
-            {% endif %}
-          </div>
-          <p class="tooltip" data-tooltip="Use o leitor de tela para ouvir a descrição dos gráficos">Os gráficos representam evolução anual</p>
-        </section>
-      </div>
-      <div class="liquid-glass-card">
-        <section aria-labelledby="descricao-grafico">
-          <h2 id="descricao-grafico">Descrição do Gráfico Atual</h2>
-          <div aria-live="polite" id="grafico-descricao">
-            Neste gráfico, a evasão no curso de direito aumentou de 2015 para 2019, enquanto a taxa de conclusão se manteve estável.
-          </div>
-        </section>
-        <button onclick="descreverGraficoIA()" aria-label="Descrever o gráfico com inteligência artificial" title="Ativa uma descrição detalhada por IA">🧠 Descrever Gráfico com IA</button>
-      </div>
-      <section aria-labelledby="ajuda">
-        <h2 id="ajuda">Ajuda e Acessibilidade</h2>
-        <p>Este painel foi desenvolvido com base em princípios de usabilidade e acessibilidade: tema escuro, contrastes adequados, suporte a leitores de tela, tooltips e navegação clara por teclado.</p>
-        <section aria-labelledby="tour">
-          <h2 id="tour">Tour Guiado Acessível</h2>
-          <p role="dialog" aria-modal="true" aria-label="Instruções de navegação">Use Tab para navegar pelos elementos, Enter para ativar botões. O painel é compatível com leitores de tela como JAWS e NVDA.</p>
-        </section>
+      <p class="tooltip" data-tooltip="Use o leitor de tela para ouvir a descrição dos gráficos">Os gráficos representam evolução anual</p>
+    </section>
+    <section aria-labelledby="ajuda">
+      <h2 id="ajuda">Ajuda e Acessibilidade</h2>
+      <p>Este painel foi desenvolvido com base em princípios de usabilidade e acessibilidade: tema escuro, contrastes adequados, suporte a leitores de tela, tooltips e navegação clara por teclado.</p>
+      <section aria-labelledby="tour">
+        <h2 id="tour">Tour Guiado Acessível</h2>
+        <p role="dialog" aria-modal="true" aria-label="Instruções de navegação">Use Tab para navegar pelos elementos, Enter para ativar botões. O painel é compatível com leitores de tela como JAWS e NVDA.</p>
       </section>
-    </main>
-  
+
+      <section aria-labelledby="descricao-grafico">
+        <h2 id="descricao-grafico">Descrição do Gráfico Atual</h2>
+        <div aria-live="polite" id="grafico-descricao">
+          Neste gráfico, a evasão no curso de direito aumentou de 2015 para 2019, enquanto a taxa de conclusão se manteve estável.
+        </div>
+      </section>
+      <button onclick="descreverGraficoIA()" aria-label="Descrever o gráfico com inteligência artificial" title="Ativa uma descrição detalhada por IA">🧠 Descrever Gráfico com IA</button>
+    </section>
+  </main>
   <!-- Botões de Acessibilidade -->
   <div style="position: fixed; top: 20%; right: 0; z-index: 9999; display: flex; flex-direction: column; gap: 0.5rem;">
-    <button aria-label="Ativar tradução em Libras" title="Ativar Libras" onclick="alert('Função Libras em desenvolvimento')">🧏‍♂️ Libras</button>
-    <button aria-label="Ativar leitura de voz" title="Ativar Leitura de Voz" onclick="alert('Leitura em voz será ativada')">🔊 Voz</button>
-    <button aria-label="Mais opções de acessibilidade" title="Abrir menu de acessibilidade" onclick="alert('Menu de Acessibilidade em breve')">♿ Acessibilidade</button>
-    <button aria-label="Ajuda" title="Abrir página de ajuda" onclick="window.location.href='ajuda/ajuda.html'">❓ Ajuda</button>
+    <button aria-label="Ativar tradução em Libras" title="Ativar Libras" onclick="alert('Função Libras em desenvolvimento')" style="background:#004aad; color:white; border:none; padding:0.5rem; border-radius: 8px;">🧏‍♂️ Libras</button>
+    <button aria-label="Ativar leitura de voz" title="Ativar Leitura de Voz" onclick="alert('Leitura em voz será ativada')" style="background:#00c853; color:white; border:none; padding:0.5rem; border-radius: 8px;">🔊 Voz</button>
+    <button aria-label="Mais opções de acessibilidade" title="Abrir menu de acessibilidade" onclick="alert('Menu de Acessibilidade em breve')" style="background:#ff9100; color:white; border:none; padding:0.5rem; border-radius: 8px;">♿ Acess.</button>
   </div>
-  <!-- WCAG 2.1.2: Sem armadilhas de teclado (Port BR) -->
-  <!-- WCAG 2.1.2: No keyboard traps (En) -->
-<script>
-document.addEventListener('keydown', function(e) {
-  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-  const ctrl = isMac ? e.metaKey : e.ctrlKey;
-  const alt = e.altKey;
-  // Helper: prevent default and stop propagation
-  function stop(e) { e.preventDefault(); e.stopPropagation(); }
-
-  // Pesquisa por ano
-  if (ctrl && alt && e.key.toUpperCase() === 'Y') { stop(e);
-    document.getElementById('ano-input')?.focus();
-  }
-  // Pesquisa por instituição
-  if (ctrl && alt && e.key.toUpperCase() === 'I') { stop(e);
-    document.getElementById('ies-input')?.focus();
-  }
-  // Contraste claro
-  if (alt && e.key.toUpperCase() === 'C') { stop(e);
-    document.documentElement.classList.remove('inverted-contrast');
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.body.style.backgroundColor = '#ffffff';
-    document.body.style.color = '#1a1a1a';
-  }
-  // Contraste escuro
-  if (alt && e.key.toUpperCase() === 'E') { stop(e);
-    document.documentElement.classList.remove('inverted-contrast');
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.body.style.backgroundColor = '#121212';
-    document.body.style.color = '#e0e0e0';
-  }
-  // Contraste invertido
-  if (alt && e.key.toUpperCase() === 'V') { stop(e);
-    document.documentElement.classList.toggle('inverted-contrast');
-  }
-  // Aumentar fonte
-  if (ctrl && e.key === '+') { stop(e);
-    ajustarFonte('aumentar');
-  }
-  // Diminuir fonte
-  if (ctrl && e.key === '-') { stop(e);
-    ajustarFonte('diminuir');
-  }
-  // Botão Libras
-  if (alt && e.key.toUpperCase() === 'L') { stop(e);
-    document.querySelector('button[aria-label="Ativar tradução em Libras"]')?.click();
-  }
-  // Síntese de voz
-  if (alt && e.key.toUpperCase() === 'S') { stop(e);
-    document.querySelector('button[aria-label="Ativar leitura de voz"]')?.click();
-  }
-  // Botão Ajuda Contextual
-  if (alt && e.key.toUpperCase() === 'A') { stop(e);
-    document.querySelector('button[aria-label="Ajuda"]')?.click();
-  }
-  // Teclado virtual (TODO: implementar)
-  if (alt && e.key.toUpperCase() === 'K') { stop(e);
-    alert('Teclado virtual ativado (em desenvolvimento).');
-  }
-  // Contraste para daltonismo
-  if (alt && e.key.toUpperCase() === 'D') { stop(e);
-    document.documentElement.classList.toggle('daltonismo-mode');
-  }
-  // Ponteiro ampliado
-  if (alt && e.key.toUpperCase() === 'P') { stop(e);
-    document.body.classList.toggle('big-cursor');
-  }
-  // Legenda Automática
-  if (ctrl && alt && e.key.toUpperCase() === 'U') { stop(e);
-    document.documentElement.classList.toggle('legenda-ativa');
-  }
-  // Tutorial de acessibilidade
-  if (alt && e.key.toUpperCase() === 'T') { stop(e);
-    window.location.href = 'tour.html';
-  }
-});
-</script>
 </body>
 </html>
