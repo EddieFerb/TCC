@@ -34,3 +34,8 @@ st.subheader("📈 Evolução das Taxas")
 fig, ax = plt.subplots(figsize=(10, 5))
 sns.lineplot(data=df_filtrado[['taxa_ingresso', 'taxa_conclusao', 'taxa_evasao']])
 st.pyplot(fig)
+
+# # Salvar gráfico como imagem PNG
+# output_dir = os.path.join(BASE_DIR, '..', '..', 'acessibilidade_web', 'graficos')
+# os.makedirs(output_dir, exist_ok=True)
+# fig.savefig(os.path.join(output_dir, 'grafico_taxas.png'))
