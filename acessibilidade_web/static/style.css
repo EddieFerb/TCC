@@ -1,0 +1,73 @@
+
+
+
+/* Alto contraste */
+body, html {
+  background-color: #000;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* Tema claro alternativo */
+body.theme-claro {
+  background-color: #FFF;
+  color: #000;
+}
+
+/* Links acessíveis */
+a {
+  color: #00FFFF;
+  text-decoration: underline;
+}
+a:focus, a:hover {
+  outline: 3px solid yellow;
+  background-color: #222;
+}
+
+/* Foco visível */
+*:focus {
+  outline: 3px dashed #FFD700;
+  outline-offset: 4px;
+}
+
+/* Botões grandes e legíveis */
+button {
+  background-color: #444;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: 3px solid #00FFFF;
+}
+
+/* Áreas com rótulo para leitores de tela */
+[role="region"] {
+  border: 2px solid #AAA;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Preferência por contraste alto do sistema operacional */
+@media (prefers-contrast: more) {
+  body {
+    background-color: #000 !important;
+    color: #FFF !important;
+  }
+  a {
+    color: #0FF !important;
+  }
+  button {
+    background-color: #222 !important;
+    color: #FFF !important;
+  }
+}
+
+/* Melhor legibilidade para gráficos */
+canvas {
+  outline: 2px dashed #FFF;
+}
