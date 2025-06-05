@@ -134,6 +134,14 @@
       font-size: 1rem;
       width: 100%;
     }
+    html.inverted-contrast {
+      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
+      background-color: #000 !important;
+      color: #ffffff !important;
+    }
+    html.inverted-contrast img {
+      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
+    }
   </style>
   <script>
     function toggleTheme() {
@@ -207,16 +215,37 @@
       // Or fetch graph automatically on filter changes as above
     });
   </script>
+  <script>
+    function ajustarFonte(acao) {
+      const html = document.documentElement;
+      const estiloAtual = window.getComputedStyle(html).fontSize;
+      let tamanho = parseFloat(estiloAtual);
+
+      if (acao === 'aumentar' && tamanho < 24) {
+        tamanho += 1;
+      } else if (acao === 'diminuir' && tamanho > 12) {
+        tamanho -= 1;
+      }
+
+      html.style.fontSize = `${tamanho}px`;
+    }
+  </script>
 </head>
 <body role="document">
   <header role="banner">
-    <h1 id="dashboard-title">Dashboard Acessível - Taxas em IES Públicas</h1>
-    <button onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">🌙 Alternar Tema</button>
+    <h1 id="dashboard-title">Taxas de Evasão em Instituições de Ensio Superior (IES)</h1>
+    <div style="display: flex; gap: 0.5rem; justify-content: center;">
+      <button onclick="document.documentElement.setAttribute('data-theme', 'light')" aria-label="Ativar tema claro" title="Ativar tema claro">🌞 Contraste Claro</button>
+      <button onclick="document.documentElement.setAttribute('data-theme', 'dark')" aria-label="Ativar tema escuro" title="Ativar tema escuro">🌚 Contraste Escuro</button>
+      <button onclick="document.documentElement.classList.toggle('inverted-contrast')" aria-label="Ativar contraste invertido" title="Ativar contraste invertido">🔄 Contraste Invertido</button>
+      <button onclick="ajustarFonte('aumentar')" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte('diminuir')" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A−</button>
+    </div>
   </header>
   <main role="main">
     <section aria-labelledby="filtros">
       <h2 id="filtros">Filtros e Controle</h2>
-      <label for="curso-select">Curso <span class="tooltip" data-tooltip="Nome do curso conforme base INEP">❔</span></label>
+      <label for="curso-select">Curso <span class="tooltip" data-tooltip="Nome do curso conforme Ministério da Educação (MEC)">❔</span></label>
       <select id="curso-select" aria-describedby="curso-help">
         <option value="direito">Direito</option>
         <option value="administracao">Administração</option>
@@ -231,7 +260,7 @@
       <label for="ano-input">Ano <span class="tooltip" data-tooltip="Ano de referência dos dados">❔</span></label>
       <input type="number" id="ano-input" min="2009" max="2023" aria-label="Campo de ano para filtro de dados" placeholder="Ex: 2020" />
 
-      <label for="ies-input">Instituição (IES) <span class="tooltip" data-tooltip="Nome da instituição conforme dados do INEP">❔</span></label>
+      <label for="ies-input">Instituição (IES) <span class="tooltip" data-tooltip="Nome da instituição conforme Ministério da Educação (MEC)">❔</span></label>
       <input type="text" id="ies-input" aria-label="Campo para digitar nome da IES" placeholder="Ex: UEL" />
     </section>
     <section aria-labelledby="graficos">
