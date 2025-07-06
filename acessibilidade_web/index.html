@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard acessível para análise de evasão em IES públicas.">
+  <title>Dashboard Acessível - Evasão IES</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap">
+  <style>
+    :root {
+      --background-light: #ffffff;
+      --text-light: #1d1d1f;
+      --background-dark: #000000;
+      --text-dark: #f5f5f7;
+      --highlight: #0071e3;
+      --button-bg: #0071e3;
+      --button-text: #ffffff;
+      --button-hover: #005bb5;
+      --border-radius: 12px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    html[data-theme='dark'] {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+    }
+    html[data-theme='light'] {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
+    body {
+      font-family: var(--font-family);
+      margin: 0;
+      padding: 1rem;
+      line-height: 1.6;
+      background-color: inherit;
+      color: inherit;
+    }
+    header {
+      background-color: var(--highlight);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: var(--border-radius);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    section {
+      margin-top: 2rem;
+    }
+    label, select, button {
+      font-size: 1rem;
+      margin-top: 1rem;
+      display: block;
+    }
+    .tooltip {
+      position: relative;
+      cursor: help;
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      background-color: #333;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+    .controls {
+      display: flex;
+      gap: 1rem;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.2rem 3rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    select {
+      padding: 0.4rem;
+      border-radius: var(--border-radius);
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    }
+  </script>
+</head>
+<body>
+  <header role="banner">
+    <h1 id="dashboard-title">Dashboard Acessível - Taxas em IES Públicas</h1>
+    <button onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">🌙 Alternar Tema</button>
+  </header>
+  <main role="main">
+    <section aria-labelledby="filtros">
+      <h2 id="filtros">Filtros e Controle</h2>
+      <label for="curso-select">Curso <span class="tooltip" data-tooltip="Nome do curso conforme base INEP">❔</span></label>
+      <select id="curso-select" aria-describedby="curso-help">
+        <option value="direito">Direito</option>
+        <option value="administracao">Administração</option>
+        <option value="engenharia">Engenharia Civil</option>
+        <option value="medicina">Medicina</option>
+      </select>
+      <p id="curso-help" class="visually-hidden">Selecione o curso para visualizar os dados</p>
+      <div class="controls">
+        <button aria-label="Exportar gráficos como imagem">📤 Exportar</button>
+        <button aria-label="Limpar filtros">🧹 Limpar Filtros</button>
+      </div>
+    </section>
+    <section aria-labelledby="graficos">
+      <h2 id="graficos">Visualização de Dados</h2>
+    <img src="graficos/grafico_taxas.png" alt="Gráfico com taxas de ingresso, conclusão e evasão" role="img" aria-label="Gráfico de linhas com estilo Apple, representando a evolução das taxas educacionais (ingresso, conclusão e evasão) por curso ao longo do tempo.">      <p class="tooltip" data-tooltip="Use o leitor de tela para ouvir a descrição dos gráficos">Os gráficos representam evolução anual</p>
+    </section>
+    <section aria-labelledby="ajuda">
+      <h2 id="ajuda">Ajuda e Acessibilidade</h2>
+      <p>Este painel foi desenvolvido com base em princípios de usabilidade e acessibilidade: tema escuro, contrastes adequados, suporte a leitores de tela, tooltips e navegação clara por teclado.</p>
+    </section>
+  </main>
+</body>
+</html>
