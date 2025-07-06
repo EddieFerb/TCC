@@ -1,3 +1,7 @@
+# Path: scripts/processamento_dados/processamento_dados/tratar_dados.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # tratar_dados.py
 # Script responsável pelo carregamento, limpeza, tratamento, cálculo de taxas e consolidação de dados educacionais extraídos dos microdados do INEP/MEC.
 

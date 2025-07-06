@@ -1,3 +1,7 @@
+# Path: scripts/modelagem/treinamento_modelo_original.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # /scripts/modelagem/treinamento_modelo.py
 # Este script treina modelos de aprendizado de máquina para prever a taxa de evasão,
 # bem como explorar as relações entre taxa de ingresso, taxa de evasão e taxa de conclusão,

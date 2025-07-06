@@ -1,3 +1,7 @@
+# Path: scripts/analises/analises.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Script: analises.py
 # Objetivo: Analisar dados de cursos e calcular/visualizar as taxas de conclusão e evasão por curso e ano
 

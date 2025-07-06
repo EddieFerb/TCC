@@ -1,3 +1,7 @@
+# Path: scripts/dashboard/app_evasao.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # app_evasao.py
 # Dashboard interativo com análise de evasão usando Streamlit
 

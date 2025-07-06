@@ -1,3 +1,7 @@
+# Path: scripts/processamento_dados/processamento_dados/tratar_dados_Transfer_Learn.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Script: tratar_dados_Transfer_Learn.py
 # Finalidade: Este script realiza o pré-processamento de dados para técnicas de Transfer Learning.
 # Ele lê a base limpa `dados_transfer_learning_clean.csv`, verifica colunas essenciais, remove dados ausentes/duplicados

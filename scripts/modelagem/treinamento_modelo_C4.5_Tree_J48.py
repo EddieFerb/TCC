@@ -1,3 +1,7 @@
+# Path: scripts/modelagem/treinamento_modelo_C4.5_Tree_J48.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Script: treinamento_modelo_C4.5_Tree_J48.py
 # Descrição: Treina modelos de regressão para prever a taxa de evasão acadêmica
 # utilizando as variáveis 'taxa_ingresso' e 'vagas_totais' como preditoras.

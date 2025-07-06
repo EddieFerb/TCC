@@ -1,3 +1,7 @@
+# Path: scripts/analises/validar_modelos_temporais.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Script para validação temporal simples de modelo preditivo.
 # Realiza análise de correlação, separa treino/teste com shuffle,
 # treina modelo LinearRegression e exibe avaliação via MSE e R².

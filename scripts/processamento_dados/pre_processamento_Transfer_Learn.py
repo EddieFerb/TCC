@@ -1,3 +1,7 @@
+# Path: scripts/processamento_dados/pre_processamento_Transfer_Learn.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # scripts/processamento_dados/pre_processamento_Transfer_Learn.py
 # Este script prepara um CSV limpo e padronizado para uso nos modelos de Transfer Learning e Fine-tuning
 

@@ -1,3 +1,7 @@
+# Path: scripts/modelagem/treinamento_modelo_Fine-tuning.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # /scripts/modelagem/treinamento_modelo.py
 # Script unificado para treinamento de modelos tradicionais e fine-tuning com rede neural
 

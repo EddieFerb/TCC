@@ -1,3 +1,7 @@
+# Path: scripts/modelagem/gerar_base_modelo.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # scripts/modelagem/gerar_base_modelo.py
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Input

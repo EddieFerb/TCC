@@ -1,3 +1,7 @@
+# Path: scripts/coleta_dados/coletar_links_inep.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # scripts/coleta_dados/coletar_links_inep.py
 # Este script coleta os links dos microdados do Censo da Educação Superior do site do INEP (1995-2023).
 

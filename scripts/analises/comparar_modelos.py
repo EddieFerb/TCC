@@ -1,3 +1,7 @@
+# Path: scripts/analises/comparar_modelos.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Script: comparar_modelos.py
 # Objetivo: Comparar dois modelos preditivos (.pkl e .h5) usando o dataset de entrada
 # 'entrada_modelos.csv', que deve conter as colunas ['taxa_ingresso', 'vagas_totais', 'target'].

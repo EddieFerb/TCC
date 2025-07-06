@@ -1,3 +1,7 @@
+# Path: scripts/modelagem/treinamento_modelo_Feature-based.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # /scripts/modelagem/treinamento_modelo_Feature-based.py
 # Este script treina modelos de aprendizado de máquina combinado com Transfer Learning baseado em features para prever a taxa de evasão,
 # bem como explorar as relações entre taxa de ingresso, taxa de evasão e taxa de conclusão,

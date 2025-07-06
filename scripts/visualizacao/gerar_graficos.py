@@ -1,3 +1,7 @@
+# Path: scripts/visualizacao/gerar_graficos.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # scripts/visualizacao/gerar_graficos.py
 # Este script gera gráficos para visualizar os resultados da análise.
 

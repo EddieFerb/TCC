@@ -1,3 +1,7 @@
+# Path: scripts/visualizacao/comparar_predicoes_cursos.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns

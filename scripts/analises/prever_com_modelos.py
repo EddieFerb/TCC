@@ -1,3 +1,7 @@
+# Path: scripts/analises/prever_com_modelos.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 import joblib
 import numpy as np
 import pandas as pd

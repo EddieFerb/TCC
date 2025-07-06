@@ -1,3 +1,7 @@
+# Path: scripts/processamento_dados/pre_processamento.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # pre_processamento.py - Script para carregar, padronizar e salvar os microdados do INEP/MEC.
 # Processa os dados brutos (IES e Cursos) por ano, realizando limpeza, renomeação e formatação padronizada.
 

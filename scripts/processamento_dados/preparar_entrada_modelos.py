@@ -1,3 +1,7 @@
+# Path: scripts/processamento_dados/preparar_entrada_modelos.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # Este script prepara os dados de entrada para o treinamento de modelos preditivos.
 # Ele lê a base tratada sem vazamento de dados, verifica se as colunas esperadas estão presentes,
 # seleciona as features relevantes ('taxa_ingresso' e 'vagas_totais') e, se disponível,

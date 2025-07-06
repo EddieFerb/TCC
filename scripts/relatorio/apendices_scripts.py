@@ -1,3 +1,7 @@
+# Path: scripts/relatorio/apendices_scripts.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
  # Script: apendices_scripts.py
  # Gera um documento Word com todos os códigos-fonte dos scripts principais do projeto, com enumeração de linhas.
 

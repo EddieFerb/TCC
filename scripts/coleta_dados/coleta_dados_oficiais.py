@@ -1,3 +1,7 @@
+# Path: scripts/coleta_dados/coleta_dados_oficiais.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # scripts/coleta_dados/coleta_dados_oficiais.py
 # Este script realiza a coleta e processamento de microdados oficiais do INEP e MEC.
 

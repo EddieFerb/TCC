@@ -1,3 +1,11 @@
+# Path: acessibilidade_web/templates/app.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
+# Path: acessibilidade_web/templates/app.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 from flask import Flask, render_template, request, send_file, jsonify
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -10,7 +18,7 @@ app = Flask(__name__)
 BASE_PATH = '../dados/processado/dados_ingresso_evasao_conclusao.csv'
 
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
 @app.route('/gerar-grafico', methods=['POST'])

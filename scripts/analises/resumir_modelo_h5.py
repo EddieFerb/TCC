@@ -1,3 +1,7 @@
+# Path: scripts/analises/resumir_modelo_h5.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 from tensorflow.keras.models import load_model
 
 # Carregar modelo

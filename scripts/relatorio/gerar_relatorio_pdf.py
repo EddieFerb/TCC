@@ -1,3 +1,7 @@
+# Path: scripts/relatorio/gerar_relatorio_pdf.py
+# Purpose (en): <write English purpose here>
+# Propósito (pt-BR): <escreva em Português aqui>
+
 # gerar_relatorio_pdf.py
 # Gera relatório analítico final em PDF e DOCX com base nos dados processados e gráficos gerados pelo projeto.
 
