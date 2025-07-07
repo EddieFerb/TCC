@@ -1,0 +1,435 @@
+<!-- Path: acessibilidade_web/templates/ajuda/ajuda.html
+  Purpose (en): Help and Accessibility instructions page for Dashboard users.
+  Propósito (pt-BR): Página de instruções de Ajuda e Acessibilidade para usuários do Dashboard. -->
+
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <title>Central de Ajuda & Acessibilidade</title>
+  <!-- (pt-BR) WCAG: Definir viewport e escalabilidade para permitir zoom até 200% -->
+  <!-- (en) WCAG: Define viewport for responsive scaling and 200% zoom support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard acessível para análise de evasão em IES públicas.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <style>
+    /* (pt-BR) WCAG: Contraste mínimo e espaçamento de texto */
+    /* (en) WCAG: Minimum contrast and text spacing */
+    body {
+      color: #000;
+      background-color: #fff;
+      font-size: 1.125em; /* Base ~18px para boa legibilidade */
+      line-height: 1.5; /* Altura de linha de 1,5x */
+      max-width: 60ch; /* Limita largura para ~80 caracteres */
+      margin: 0 auto;
+      padding: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      color: var(--text-light);
+      background-color: var(--background-light);
+      line-height: 1.6;
+    }
+    a {
+      color: #0645AD; /* Azul com contraste adequado */
+    }
+    a:focus, a:hover {
+      outline: 2px solid #000; /* Indicador de foco visível */
+    }
+    :root {
+      /* WCAG 1.4.3: Contraste mínimo de cores (Port BR) */
+      /* WCAG 1.4.3: Minimum color contrast (En) */
+      --background-light: #ffffff;
+      --text-light: #1a1a1a;
+      --background-dark: #121212;
+      --text-dark: #e0e0e0;
+      --highlight: #005bb5;
+      --button-bg: #005bb5;
+      --button-text: #ffffff;
+      --button-hover: #003f7d;
+      --border-radius: 12px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    /* (pt-BR) WCAG 1.4.3: Contraste adequado no tema escuro para títulos */
+    /* (en) WCAG 1.4.3: Ensure proper contrast for headings in dark mode */
+    html[data-theme="dark"] h1,
+    html[data-theme="dark"] h2,
+    html[data-theme="dark"] label {
+      color: var(--text-dark);
+    }
+    h1, h2 {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5em;
+    }
+    button {
+      font-family: var(--font-family);
+      font-size: 17px;
+      padding: 12px 24px;
+      border-radius: 980px;
+      /* WCAG 2.5.8: Tamanho mínimo do alvo clicável (Port BR) */
+      /* WCAG 2.5.8: Minimum target size (En) */
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: var(--button-hover);
+    }
+    /* WCAG 2.4.7: Foco visível para navegação por teclado (Port BR) */
+    /* WCAG 2.4.7: Visible focus for keyboard navigation (En) */
+    button:focus {
+      outline: 3px solid var(--highlight);
+      outline-offset: 2px;
+    }
+    header {
+      background-color: transparent;
+      color: var(--text-light);
+      padding: 1rem 0;
+      text-align: center;
+    }
+    /* Liquid Glass Card style, matching index.html */
+    .liquid-glass-card {
+      background: rgba(255, 255, 255, 0.70);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      transition: background 0.3s;
+      max-width: 960px;
+      width: 100%;
+    }
+    html[data-theme="dark"] .liquid-glass-card {
+      background: rgba(25, 25, 25, 0.70);
+      border: 1px solid rgba(64, 64, 64, 0.22);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    section {
+      margin-top: 2rem;
+    }
+    label, select, button {
+      font-size: 17px;
+      margin-top: 1rem;
+      display: block;
+      font-family: var(--font-family);
+    }
+    select {
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 17px;
+      font-family: var(--font-family);
+      margin-top: 0.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input[type="number"], input[type="text"] {
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 17px;
+      font-family: var(--font-family);
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 0.5rem;
+    }
+    .tooltip {
+      position: relative;
+      cursor: help;
+      font-size: 17px;
+      font-family: var(--font-family);
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      background-color: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+    .controls {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      margin-top: 1rem;
+    }
+    html.inverted-contrast {
+      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
+      background-color: #000 !important;
+      color: #ffffff !important;
+    }
+    html.inverted-contrast img {
+      filter: invert(100%) hue-rotate(180deg) contrast(1.1) saturate(1.2);
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+    }
+  </script>
+  <script>
+    function descreverGraficoIA() {
+      const descricao = "Analisando tendências: Em Direito, evasão cresceu de 2015 a 2019. Conclusão estável. Engenharia mostra queda na evasão desde 2018.";
+      const area = document.getElementById("grafico-descricao");
+      area.textContent = descricao;
+      area.setAttribute("aria-live", "assertive");
+    }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const exportButton = document.querySelector('button[aria-label="Exportar gráficos como imagem"]');
+      const clearButton = document.querySelector('button[aria-label="Limpar filtros e retornar à visualização padrão"]');
+      const cursoInput = document.getElementById('curso-input');
+      const anoInput = document.getElementById('ano-input');
+      const iesInput = document.getElementById('ies-input');
+      const graficoContainer = document.getElementById('grafico-container');
+
+      // Function to fetch and update the graph dynamically
+      async function fetchGrafico() {
+        const curso = cursoInput.value;
+        const ano = anoInput.value;
+        const ies = iesInput.value;
+
+        const response = await fetch('/gerar-grafico', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ curso, ano, ies }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.grafico_url) {
+            graficoContainer.innerHTML = `<img src="${data.grafico_url}" alt="Gráfico gerado dinamicamente" role="img" aria-describedby="grafico-descricao">`;
+          } else {
+            graficoContainer.innerHTML = '<p>Gráfico não disponível para os filtros selecionados.</p>';
+          }
+        } else {
+          graficoContainer.innerHTML = '<p>Erro ao carregar gráfico.</p>';
+        }
+      }
+
+      // Attach event listeners
+      exportButton.addEventListener('click', () => {
+        // Implement export functionality here if needed
+        alert('Funcionalidade de exportação ainda não implementada.');
+      });
+
+      clearButton.addEventListener('click', () => {
+        cursoInput.value = '';
+        anoInput.value = '';
+        iesInput.value = '';
+        graficoContainer.innerHTML = '';
+      });
+
+      // Optionally, fetch graph when filters change
+      [cursoInput, anoInput, iesInput].forEach(element => {
+        element.addEventListener('change', fetchGrafico);
+      });
+
+      // If you want a button to generate graph, you can add it here
+      // Or fetch graph automatically on filter changes as above
+    });
+  </script>
+  <script>
+    function ajustarFonte(acao) {
+      const html = document.documentElement;
+      const estiloAtual = window.getComputedStyle(html).fontSize;
+      let tamanho = parseFloat(estiloAtual);
+
+      // WCAG 1.4.4: Texto redimensionável até 200% (Port BR)
+      // WCAG 1.4.4: Resize text up to 200% (En)
+      const tamanhoBase = 17; // base font size in px
+      const maxTamanho = tamanhoBase * 2; // 200%
+      const minTamanho = tamanhoBase * 0.7; // about 70% minimum for readability
+
+      const incremento = 2;
+
+      if (acao === 'aumentar' && tamanho < maxTamanho) {
+        tamanho += incremento;
+      } else if (acao === 'diminuir' && tamanho > minTamanho) {
+        tamanho -= incremento;
+      }
+
+      html.style.fontSize = `${tamanho}px`;
+
+      // Ajusta também espaçamento de linha para melhorar a legibilidade
+      document.body.style.lineHeight = tamanho >= 20 ? '1.8' : '1.6';
+    }
+  </script>
+</head>
+<body role="document">
+  
+    <header role="banner">
+      <div style="display: flex; gap: 0.5rem; justify-content: center;">
+        <button onclick="
+          document.documentElement.classList.remove('inverted-contrast');
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.body.style.backgroundColor = '#ffffff';
+          document.body.style.color = '#1a1a1a';
+        " aria-label="Ativar tema claro" title="Ativar tema claro">Contraste Claro</button>
+        <button onclick="
+          document.documentElement.classList.remove('inverted-contrast');
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.body.style.backgroundColor = '#121212';
+          document.body.style.color = '#e0e0e0';
+        " aria-label="Ativar tema escuro" title="Ativar tema escuro">Contraste Escuro</button>
+        <button onclick="
+          if (!document.documentElement.classList.contains('inverted-contrast')) {
+            document.documentElement.classList.add('inverted-contrast');
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.body.style.backgroundColor = '#ffffff';
+            document.body.style.color = '#1a1a1a';
+          } else {
+            document.documentElement.classList.remove('inverted-contrast');
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.body.style.backgroundColor = '#ffffff';
+            document.body.style.color = '#1a1a1a';
+          }
+        " aria-label="Ativar contraste invertido" title="Ativar contraste invertido">Contraste Invertido</button>
+        <button onclick="ajustarFonte('aumentar')" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+        <button onclick="ajustarFonte('diminuir')" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A−</button>
+      </div>
+    </header>
+  
+<main>
+  <div class="liquid-glass-card">
+    <h1 tabindex="0">Central de Ajuda</h1>
+    <p tabindex="0">Bem-vindo! Aqui estão as principais orientações de uso do Dashboard.</p>
+
+    <h2 tabindex="0">Contraste e Tema</h2>
+    <p tabindex="0">Use os botões no topo para alternar entre tema claro, escuro e contraste invertido.</p>
+
+    <h2 tabindex="0">Ajuste de Fonte</h2>
+    <p tabindex="0">Use os botões A+ e A− para ajustar o tamanho da fonte até 200%.</p>
+
+    <h2 tabindex="0">Navegação por Teclado</h2>
+    <ul>
+      <li tabindex="0"><kbd>Tab</kbd> para avançar pelos elementos interativos.</li>
+      <li tabindex="0"><kbd>Shift</kbd> + <kbd>Tab</kbd> para voltar.</li>
+    </ul>
+  </div>
+
+  <div class="liquid-glass-card">
+    <h2 tabindex="0">TECLAS ATALHOS ACESSIBILIDADE WINDOWS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Atalho</th>
+          <th>Ação sugerida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>CTRL + ALT + Y</td><td>Acesso rápido à pesquisa por ano</td></tr>
+        <tr><td>CTRL + ALT + I</td><td>Acesso rápido à pesquisa por instituição</td></tr>
+        <tr><td>ALT + C</td><td>Ativar Modo Contraste Claro</td></tr>
+        <tr><td>ALT + E</td><td>Ativar Modo Contraste Escuro</td></tr>
+        <tr><td>ALT + V</td><td>Ativar Modo Contraste Invertido</td></tr>
+        <tr><td>CTRL + +</td><td>Aumentar tamanho das palavras (zoom de texto)</td></tr>
+        <tr><td>CTRL + -</td><td>Diminuir tamanho das palavras</td></tr>
+        <tr><td>ALT + L</td><td>Ativar/Desativar Botão Libras (ex.: plugin VLibras)</td></tr>
+        <tr><td>ALT + S</td><td>Ativar/Desativar Síntese de voz/leitor de tela interno (ou direciona para configuração de voz)</td></tr>
+        <tr><td>ALT + H</td><td>Acesso rápido à página de Ajuda</td></tr>
+        <tr><td>ALT + A</td><td>Focar no Botão Ajuda Contextual (se diferente da página de Ajuda principal)</td></tr>
+        <tr><td>ALT + K</td><td>Ativar teclado virtual na tela (para quem tem mobilidade reduzida)</td></tr>
+        <tr><td>ALT + D</td><td>Alternar para Modo de Alto Contraste para Daltonismo (se for um modo específico)</td></tr>
+        <tr><td>ALT + P</td><td>Alternar Ponteiro de Mouse Ampliado</td></tr>
+        <tr><td>CTRL + ALT + U</td><td>Ativar/desativar Legenda Automática (caso tenha vídeos)</td></tr>
+        <tr><td>ALT + T</td><td>Ir direto para tutorial de acessibilidade (fluxo guiado explicando como usar os recursos)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="liquid-glass-card">
+    <h2 tabindex="0">TECLAS ATALHOS ACESSIBILIDADE MACOS / LINUX</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Atalho</th>
+          <th>Ação sugerida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>⌘ + ⌥ + Y</td><td>Acesso rápido à pesquisa por ano</td></tr>
+        <tr><td>⌘ + ⌥ + I</td><td>Acesso rápido à pesquisa por instituição</td></tr>
+        <tr><td>⌥ + C</td><td>Ativar Modo Contraste Claro</td></tr>
+        <tr><td>⌥ + E</td><td>Ativar Modo Contraste Escuro</td></tr>
+        <tr><td>⌥ + V</td><td>Ativar Modo Contraste Invertido</td></tr>
+        <tr><td>⌘ + +</td><td>Aumentar tamanho das palavras (zoom de texto)</td></tr>
+        <tr><td>⌘ + -</td><td>Diminuir tamanho das palavras</td></tr>
+        <tr><td>⌥ + L</td><td>Ativar/Desativar Botão Libras (ex.: plugin VLibras)</td></tr>
+        <tr><td>⌥ + S</td><td>Ativar/Desativar Síntese de voz/leitor de tela interno (ou direciona para configuração de voz)</td></tr>
+        <tr><td>⌥ + H</td><td>Acesso rápido à página de Ajuda</td></tr>
+        <tr><td>⌥ + A</td><td>Focar no Botão Ajuda Contextual (se diferente da página de Ajuda principal)</td></tr>
+        <tr><td>⌥ + K</td><td>Ativar teclado virtual na tela (para quem tem mobilidade reduzida)</td></tr>
+        <tr><td>⌥ + D</td><td>Alternar para Modo de Alto Contraste para Daltonismo (se for um modo específico)</td></tr>
+        <tr><td>⌥ + P</td><td>Alternar Ponteiro de Mouse Ampliado</td></tr>
+        <tr><td>⌘ + ⌥ + U</td><td>Ativar/desativar Legenda Automática (caso tenha vídeos)</td></tr>
+        <tr><td>⌥ + T</td><td>Ir direto para tutorial de acessibilidade (fluxo guiado explicando como usar os recursos)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="liquid-glass-card">
+    <h2 tabindex="0">Descrição de Gráficos</h2>
+    <p tabindex="0">Clique no botão 🧠 para descrição detalhada do gráfico com IA.</p>
+
+    <h2 tabindex="0">Leitura em Libras</h2>
+    <p tabindex="0">O botão 🧏 ativa um intérprete de Libras (em desenvolvimento).</p>
+
+    <h2 tabindex="0">Leitura de Voz</h2>
+    <p tabindex="0">Ative 🔊 para ouvir descrições do gráfico atual.</p>
+  </div>
+</main>
+  
+  <!-- Botões de Acessibilidade -->
+  <div style="position: fixed; top: 20%; right: 0; z-index: 9999; display: flex; flex-direction: column; gap: 0.5rem;">
+    <button aria-label="Ativar tradução em Libras" title="Ativar Libras" onclick="alert('Função Libras em desenvolvimento')">🧏‍♂️ Libras</button>
+    <button aria-label="Ativar leitura de voz" title="Ativar Leitura de Voz" onclick="alert('Leitura em voz será ativada')">🔊 Voz</button>
+    <button aria-label="Mais opções de acessibilidade" title="Abrir menu de acessibilidade" onclick="alert('Menu de Acessibilidade em breve')">♿ Acessibilidade</button>
+    <button aria-label="Página Inicial" title="Voltar para página inicial" onclick="window.location.href='../index.html'">🏠 Página Inicial</button>
+  </div>
+  <!-- WCAG 2.1.2: Sem armadilhas de teclado (Port BR) -->
+  <!-- WCAG 2.1.2: No keyboard traps (En) -->
+</body>
+</html>
