@@ -2,23 +2,29 @@
 # Purpose (en): Build Flask app with scikit-learn and serve with Gunicorn on Render
 # Propósito (pt-BR): Construir app Flask com scikit-learn e servir com Gunicorn no Render
 
+# Use uma imagem oficial do Python como base
 FROM python:3.11-slim
 
-# Instala dependências de build para Cython e extensões C
-RUN apt-get update && \
-    apt-get install -y build-essential gcc g++ python3-dev && \
-    pip install --upgrade pip && \
-    pip install cython
-
+# Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-COPY . /app
+# Copia os arquivos de dependências primeiro (para usar cache de camadas)
+COPY requirements.txt requirements.txt
 
-# Instala dependências Python
-RUN pip install --no-cache-dir -r requirements.txt
+# Instala as dependências do projeto
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
-# Expõe a porta Flask
+# Copia o restante do código
+COPY . .
+
+# Expõe a porta que o Render vai acessar
 EXPOSE 5000
 
-# Usa Gunicorn para produção
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
+# Define a variável de ambiente para o Flask
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_ENV=production
+
+# Comando para iniciar o app Flask usando gunicorn (melhor para produção)
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
