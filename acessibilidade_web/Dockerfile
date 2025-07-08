@@ -5,20 +5,23 @@
 # Use imagem oficial Python
 FROM python:3.11-slim
 
-# Instale build tools para scikit-learn se precisar compilar
-RUN apt-get update && apt-get install -y build-essential gcc g++ python3-dev
+# Instale build tools necessários para dependências como scikit-learn
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential gcc g++ python3-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # Defina diretório de trabalho
 WORKDIR /app
 
-# Copie tudo
-COPY . /app
+# Copie os arquivos para o contêiner
+COPY . .
 
-# Instale dependências
-RUN pip install --no-cache-dir -r requirements.txt
+# Instale dependências Python
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Exponha porta Flask
 EXPOSE 5000
 
-# Execute o app usando Gunicorn
-CMD ["gunicorn", "app:app"]
+# Use Gunicorn como servidor WSGI de produção
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
