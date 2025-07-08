@@ -1,29 +1,36 @@
-from flask import Flask, render_template, request, send_file, jsonify
-import matplotlib.pyplot as plt
+# Path: acessibilidade_web/app.py
+# Purpose (en): Flask web server for accessible dashboard with dynamic graph generation using IA, ready for Render deployment.
+# Propósito (pt-BR): Servidor web Flask para dashboard acessível com geração dinâmica de gráficos usando IA, pronto para deploy no Render.
+
+from flask import Flask, render_template, request, jsonify
 import pandas as pd
-import os
+import matplotlib.pyplot as plt
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
-# Caminho da base consolidada (pode ser adaptado)
+# Caminho para base de dados processada
 BASE_PATH = '../dados/processado/dados_ingresso_evasao_conclusao.csv'
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/ajuda')
+def ajuda():
+    return render_template('ajuda/ajuda.html')
+
 @app.route('/gerar-grafico', methods=['POST'])
 def gerar_grafico():
-    # Suporte para JSON ou Form
     if request.is_json:
-        dados = request.get_json()
+        data = request.get_json()
     else:
-        dados = request.form
+        data = request.form
 
-    curso = dados.get('curso', '').lower()
-    ano = dados.get('ano', '')
-    ies = dados.get('ies', '').lower()
+    curso = data.get('curso', '').lower()
+    ano = data.get('ano', '')
+    ies = data.get('ies', '').lower()
 
     df = pd.read_csv(BASE_PATH)
 
@@ -38,15 +45,8 @@ def gerar_grafico():
         df = df[df['nome_ies'].str.lower().str.contains(ies)]
 
     if df.empty:
-        return render_template('index.html', erro="Nenhum dado encontrado.")
+        return jsonify({'error': 'Nenhum dado encontrado.'})
 
-    # Validação: a IES precisa ter pelo menos dados entre 2009 e 2023
-    anos_disponiveis = df['ano'].dropna().unique()
-    anos_esperados = set(range(2009, 2024))
-    if not anos_esperados.issubset(set(anos_disponiveis)):
-        return render_template('index.html', erro="Dados incompletos para o período 2009–2023.")
-
-    # Gerar gráfico sob demanda
     plt.figure(figsize=(10, 6))
     plt.plot(df['ano'], df['ingressantes'], label='Ingressantes')
     plt.plot(df['ano'], df['concluintes'], label='Concluintes')
@@ -64,8 +64,8 @@ def gerar_grafico():
     plt.savefig(filepath)
     plt.close()
 
-    grafico_url = filepath
-    return render_template('index.html', grafico_url=grafico_url)
+    grafico_url = f'static/graficos/{filename}'
+    return jsonify({'grafico_url': grafico_url})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(host='0.0.0.0', port=5000)

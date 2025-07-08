@@ -32,7 +32,14 @@ script_paths = [
     "scripts/analises/resumir_modelo_h5.py",
     "scripts/visualizacao/gerar_graficos.py",
     "scripts/visualizacao/comparar_predicoes_cursos.py",
-    "scripts/dashboard/app_evasao.py"
+    "scripts/dashboard/app_evasao.py",
+    "acessibilidade_web/index.html",
+    "docs/ajuda/ajuda.html",
+    "docs/static/script.js",
+    "docs/static/style.css",
+    "docs/static/tour.js",
+    "docs/static/alt-descriptions/graficos.json",
+    "docs/static/voice.js",
 ]
 
 # Criação do documento Word
