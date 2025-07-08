@@ -33,13 +33,15 @@ script_paths = [
     "scripts/visualizacao/gerar_graficos.py",
     "scripts/visualizacao/comparar_predicoes_cursos.py",
     "scripts/dashboard/app_evasao.py",
-    "acessibilidade_web/index.html",
-    "docs/ajuda/ajuda.html",
-    "docs/static/script.js",
-    "docs/static/style.css",
-    "docs/static/tour.js",
-    "docs/static/alt-descriptions/graficos.json",
-    "docs/static/voice.js",
+    "acessibilidade_web/app.py",
+    "acessibilidade_web/Dockerfile",
+    "acessibilidade_web/templates/index.html",
+    "acessibilidade_web/templates/ajuda/ajuda.html",
+    "acessibilidade_web/static/css/style.css",
+    "acessibilidade_web/static/js/script.js",
+    "acessibilidade_web/static/js/tour.js",
+    "acessibilidade_web/static/js/voice.js",
+    "acessibilidade_web/static/alt-descriptions/graficos.json"
 ]
 
 # Criação do documento Word
