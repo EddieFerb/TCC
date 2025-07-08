@@ -1,0 +1,1 @@
+web: gunicorn acessibilidade_web.app:app

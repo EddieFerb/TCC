@@ -41,7 +41,14 @@ script_paths = [
     "acessibilidade_web/static/js/script.js",
     "acessibilidade_web/static/js/tour.js",
     "acessibilidade_web/static/js/voice.js",
-    "acessibilidade_web/static/alt-descriptions/graficos.json"
+    "acessibilidade_web/static/alt-descriptions/graficos.json",
+    "create_db.py",
+    "scripts/db/models.py",
+    "scripts/db/__init__.py",
+    "acessibilidade_web/__init__.py",
+    "acessibilidade_web/runtime.txt",
+    "acessibilidade_web/requirements.txt",
+    "acessibilidade_web/config.py"
 ]
 
 # Criação do documento Word

@@ -229,20 +229,15 @@
       const exportButton = document.querySelector('button[aria-label="Exportar gráficos como imagem"]');
       const clearButton = document.querySelector('button[aria-label="Limpar filtros e retornar à visualização padrão"]');
       const cursoInput = document.getElementById('curso-input');
-      const anoInput = document.getElementById('ano-input');
       const iesInput = document.getElementById('ies-input');
       const graficoContainer = document.getElementById('grafico-container');
 
       // Inline clear buttons for each filter
       const clearCurso = document.querySelector('label[for="curso-input"] button');
-      const clearAno = document.querySelector('label[for="ano-input"] button');
       const clearIes = document.querySelector('label[for="ies-input"] button');
 
       clearCurso.addEventListener('click', () => {
         document.getElementById('curso-input').value = '';
-      });
-      clearAno.addEventListener('click', () => {
-        document.getElementById('ano-input').value = '';
       });
       clearIes.addEventListener('click', () => {
         document.getElementById('ies-input').value = '';
@@ -251,7 +246,6 @@
       // Function to fetch and update the graph dynamically
       async function fetchGrafico() {
         const curso = cursoInput.value;
-        const ano = anoInput.value;
         const ies = iesInput.value;
 
         const response = await fetch('/gerar-grafico', {
@@ -259,7 +253,7 @@
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ curso, ano, ies }),
+          body: JSON.stringify({ curso, ies }),
         });
 
         if (response.ok) {
@@ -283,14 +277,13 @@
       if (clearButton) {
         clearButton.addEventListener('click', () => {
           cursoInput.value = '';
-          anoInput.value = '';
           iesInput.value = '';
           graficoContainer.innerHTML = '';
         });
       }
 
       // Optionally, fetch graph when filters change
-      [cursoInput, anoInput, iesInput].forEach(element => {
+      [cursoInput, iesInput].forEach(element => {
         element.addEventListener('change', fetchGrafico);
       });
       // If you want a button to generate graph, you can add it here
@@ -363,15 +356,23 @@
       <div class="liquid-glass-card">
         <section aria-labelledby="filtros">
           <h2 id="filtros">Filtros e Controle</h2>
-          <label for="curso-input">Curso <span class="tooltip" data-tooltip="Digite o nome do curso conforme Ministério da Educação (MEC)">❔</span><button aria-label="Limpar filtros do curso" title="Limpar filtros do curso">🧹</button></label>
-          <input type="text" id="curso-input" aria-describedby="curso-help" placeholder="Ex: Direito" />
-          <p id="curso-help" class="visually-hidden">Digite o curso desejado para visualizar os dados.</p>
-          <label for="ano-input">Ano <span class="tooltip" data-tooltip="Ano de referência dos dados">❔</span><button aria-label="Limpar filtros do ano" title="Limpar filtros do ano">🧹</button></label>
-          <input type="number" id="ano-input" min="2009" max="2023" aria-describedby="ano-help" aria-label="Campo de ano para filtro de dados" placeholder="Ex: 2020" />
-          <p id="ano-help" class="visually-hidden">Digite o ano desejado para filtrar os dados.</p>
-          <label for="ies-input">Instituição (IES) <span class="tooltip" data-tooltip="Nome da instituição conforme Ministério da Educação (MEC)">❔</span><button aria-label="Limpar filtros da instituição" title="Limpar filtros da instituição">🧹</button></label>
-          <input type="text" id="ies-input" aria-describedby="ies-help" aria-label="Campo para digitar nome da IES" placeholder="Ex: UEL" />
-          <p id="ies-help" class="visually-hidden">Digite o nome da instituição para filtrar os dados.</p>
+          <label for="curso-input">Curso 
+            <span class="tooltip" data-tooltip="Digite ou selecione o curso">❔</span>
+          </label>
+          <input type="text" id="curso-input" list="cursos" placeholder="Ex: Direito" />
+          <datalist id="cursos"></datalist>
+
+          <label for="ies-input">Instituição (IES)
+            <span class="tooltip" data-tooltip="Digite ou selecione a IES">❔</span>
+          </label>
+          <input type="text" id="ies-input" list="ies-list" placeholder="Ex: Universidade Estadual de Londrina" />
+          <datalist id="ies-list"></datalist>
+
+          <label for="ano-input">Ano
+            <span class="tooltip" data-tooltip="Selecione o ano">❔</span>
+          </label>
+          <input type="number" id="ano-input" placeholder="Ex: 2020" min="2000" max="2025" />
+          <button id="buscar-button" onclick="fetchGrafico()">Buscar</button>
         </section>
       </div>
       <div class="liquid-glass-card">
@@ -424,10 +425,6 @@ document.addEventListener('keydown', function(e) {
   // Helper: prevent default and stop propagation
   function stop(e) { e.preventDefault(); e.stopPropagation(); }
 
-  // Pesquisa por ano
-  if (ctrl && alt && e.key.toUpperCase() === 'Y') { stop(e);
-    document.getElementById('ano-input')?.focus();
-  }
   // Pesquisa por instituição
   if (ctrl && alt && e.key.toUpperCase() === 'I') { stop(e);
     document.getElementById('ies-input')?.focus();
@@ -490,6 +487,35 @@ document.addEventListener('keydown', function(e) {
   if (alt && e.key.toUpperCase() === 'T') { stop(e);
     window.location.href = 'tour.html';
   }
+});
+</script>
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const cursosList = document.getElementById('cursos');
+  const iesList = document.getElementById('ies-list');
+
+  try {
+    const response = await fetch('/autocomplete');
+    const data = await response.json();
+
+    data.cursos.forEach(curso => {
+      const option = document.createElement('option');
+      option.value = curso;
+      cursosList.appendChild(option);
+    });
+
+    data.ies.forEach(ies => {
+      const option = document.createElement('option');
+      option.value = ies;
+      iesList.appendChild(option);
+    });
+
+  } catch (error) {
+    console.error('Erro ao carregar autocomplete:', error);
+  }
+
+  document.getElementById('buscar-button').addEventListener('click', fetchGrafico);
 });
 </script>
 </body>

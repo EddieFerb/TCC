@@ -1,0 +1,23 @@
+<!-- # Path: acessibilidade_web/templates/grafico_evasao.html -->
+<!-- Purpose (en): Display a generated graph of student dropout rates. -->
+<!-- Propósito (pt-BR): Exibir um gráfico gerado das taxas de evasão de alunos. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gráfico de Evasão</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Visualização do Gráfico de Evasão</h1>
+  </header>
+  <main>
+    <img src="{{ url_for('static', filename='graficos/SEU_ARQUIVO.png') }}"
+         alt="Gráfico de evasão gerado"
+         style="max-width:100%; height:auto;">
+    <p><a href="{{ url_for('index') }}">Voltar para Dashboard</a></p>
+  </main>
+</body>
+</html>
