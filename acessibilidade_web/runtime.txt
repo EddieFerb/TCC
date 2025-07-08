@@ -1,0 +1,2 @@
+# Path: acessibilidade_web/runtime.txt
+python-3.11.9
